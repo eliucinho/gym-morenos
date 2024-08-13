@@ -11,7 +11,7 @@
             background-color: #007bff;
             color: #fff;
         }
-        .exercise-details, .food-details {
+        .details {
             margin-bottom: 15px;
         }
     </style>
@@ -20,27 +20,24 @@
     <div class="container">
         <h1 class="text-center my-4">Plan de Ejercicios y Alimentación</h1>
 
-        <!-- Rutina de Ejercicios -->
-        <div class="section-content mb-5">
-            <h2 class="text-center">Rutina de Ejercicios</h2>
-            <ul class="nav nav-tabs justify-content-center" id="exerciseTabs" role="tablist">
-                <!-- Tabs para los días de la semana -->
-            </ul>
+        <!-- Tabs para los días de la semana -->
+        <ul class="nav nav-tabs justify-content-center" id="dayTabs" role="tablist">
+            <!-- Tabs para los días de lunes a domingo -->
+        </ul>
 
-            <div class="tab-content" id="exerciseContent">
-                <!-- Contenido de los ejercicios por día -->
+        <!-- Panel de Ejercicios -->
+        <div class="mt-4">
+            <h2 class="text-center">Rutina de Ejercicios</h2>
+            <div id="exercisePanel" class="details">
+                <!-- Contenido de los ejercicios para el día seleccionado -->
             </div>
         </div>
 
-        <!-- Plan de Comidas -->
-        <div class="section-content">
+        <!-- Panel de Comidas -->
+        <div class="mt-4">
             <h2 class="text-center">Plan de Comidas</h2>
-            <ul class="nav nav-tabs justify-content-center" id="foodTabs" role="tablist">
-                <!-- Tabs para los días de la semana -->
-            </ul>
-
-            <div class="tab-content" id="foodContent">
-                <!-- Contenido de la comida por día -->
+            <div id="foodPanel" class="details">
+                <!-- Contenido de la comida para el día seleccionado -->
             </div>
         </div>
     </div>
