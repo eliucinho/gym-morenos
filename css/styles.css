@@ -1,0 +1,18 @@
+.btn-pendiente {
+    background-color: yellow;
+    color: black;
+}
+
+.btn-hecho {
+    background-color: green;
+    color: white;
+}
+
+.btn-omitido {
+    background-color: gray;
+    color: white;
+}
+
+.tachado {
+    text-decoration: line-through;
+}

@@ -4,48 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plan de Ejercicios y Alimentación</title>
-    <!-- Incluir Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .tabs button.active {
-            background-color: #007bff;
-            color: #fff;
-        }
-        .details {
-            margin-bottom: 15px;
-        }
-    </style>
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <h1 class="text-center my-4">Plan de Ejercicios y Alimentación</h1>
 
         <!-- Tabs para los días de la semana -->
-        <ul class="nav nav-tabs justify-content-center" id="dayTabs" role="tablist">
-            <!-- Tabs para los días de lunes a domingo -->
-        </ul>
+        <ul class="nav nav-tabs justify-content-center" id="dayTabs" role="tablist"></ul>
 
         <!-- Panel de Ejercicios -->
         <div class="mt-4">
             <h2 class="text-center">Rutina de Ejercicios</h2>
-            <div id="exercisePanel" class="details">
-                <!-- Contenido de los ejercicios para el día seleccionado -->
-            </div>
+            <div id="exercisePanel" class="details"></div>
         </div>
 
         <!-- Panel de Comidas -->
         <div class="mt-4">
             <h2 class="text-center">Plan de Comidas</h2>
-            <div id="foodPanel" class="details">
-                <!-- Contenido de la comida para el día seleccionado -->
-            </div>
+            <div id="foodPanel" class="details"></div>
+        </div>
+
+        <!-- Botón de restaurar -->
+        <div class="text-center mt-4">
+            <button id="restoreDayButton" class="btn btn-warning">Restaurar Día</button>
         </div>
     </div>
 
-    <!-- Incluir Bootstrap y dependencias -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/dayTabs.js"></script>
+    <script src="js/panels.js"></script>
+    <script src="js/statusButtons.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
