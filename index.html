@@ -1,48 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Plan de Alimentación y Ejercicio</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            color: #333;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tabs button {
+            background-color: #ddd;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+            margin: 0 5px;
+        }
+
+        .tabs button:hover {
+            background-color: #ccc;
+        }
+
+        .tabs button.active {
+            background-color: #999;
+            color: #fff;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
 </head>
 <body>
- <header>
-        <h1>Welcome to My Website</h1>
-        <nav>
-            <ul>
-                <li><a href="list.html">News Category 1</a></li>
-                <li><a href="list.html">News Category 2</a></li>
-                <li><a href="list.html">News Category 3</a></li>
-                <li><a href="list.html">News Category 4</a></li>
-                <li><a href="add.html">Add News</a></li>
-            </ul>
-        </nav>
-    </header>
- <main>
-  <section class="gallery">
-            <a href="list.html"><img src="image1.jpg" alt="News 1"></a>
-            <a href="list.html"><img src="image2.jpg" alt="News 2"></a>
-            <a href="list.html"><img src="image3.jpg" alt="News 3"></a>
-            <a href="list.html"><img src="image4.jpg" alt="News 4"></a>
-            <a href="add.html"><img src="add.jpg" alt="Add News"></a>
-  </section>
-  
-  <section>
-   <input id="numero1" type="number" placeholder="Número 1">
-   <input id="numero2" type="number" placeholder="Número 2">
-   <button id="btnSumar" onclick="sumar()">"Cargando..."</button>
-  </section>
-  
-  <section>
-   <p id="resultado"></p>
-  </section>
- 
- </main>
- <footer>
-        <p>&copy; 2024 My Website. All rights reserved.</p>
-    </footer>
- 
+    <div class="container">
+        <h1>Plan de Alimentación y Ejercicio</h1>
+        <div class="tabs">
+            <button class="tab-link active" data-tab="tab1">Plan de Comidas</button>
+            <button class="tab-link" data-tab="tab2">Rutina de Ejercicios</button>
+        </div>
+
+        <div id="tab1" class="tab-content active">
+            <h2>Plan de Comidas</h2>
+            <table id="comidaTable">
+                <!-- Contenido generado dinámicamente -->
+            </table>
+        </div>
+
+        <div id="tab2" class="tab-content">
+            <h2>Rutina de Ejercicios</h2>
+            <table id="ejercicioTable">
+                <!-- Contenido generado dinámicamente -->
+            </table>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
