@@ -1,34 +1,67 @@
 {
   "comidas": [
     {
-      "comida": "Desayuno",
-      "semana": "Avena con frutas y nueces (1 taza de avena, 1 taza de leche, 1 plátano o una manzana, 1 cucharada de nueces picadas), 1 taza de té verde o café sin azúcar",
-      "finDeSemana": "Tostadas integrales con aguacate y huevo pochado (2 rebanadas de pan integral, 1/2 aguacate, 1 huevo pochado), 1 taza de café o té sin azúcar"
+      "dia": "Lunes",
+      "desayuno": "Avena con frutas y nueces (1 taza de avena, 1 taza de leche, 1 plátano o una manzana, 1 cucharada de nueces picadas), 1 taza de té verde o café sin azúcar",
+      "mediaManana": "Yogur natural con semillas de chía (1 taza de yogur natural, 1 cucharada de semillas de chía), 1 pieza de fruta (manzana, pera, naranja)",
+      "almuerzo": "Pollo a la parrilla con quinoa y vegetales (150g de pechuga de pollo a la parrilla, 1 taza de quinoa cocida, 1 taza de brócoli al vapor y zanahorias), Ensalada de hojas verdes con tomate, pepino y aguacate (Aliño: 1 cucharada de aceite de oliva y jugo de limón)",
+      "merienda": "Batido de proteínas (opcional) (1 scoop de proteína en polvo, 1 taza de leche o agua, 1 puñado de espinacas, 1 plátano)",
+      "cena": "Tortilla de vegetales con espinacas y champiñones (3 claras de huevo y 1 huevo entero, 1 taza de espinacas, 1/2 taza de champiñones), 1 rebanada de pan integral tostado",
+      "antesDeDormir": "Infusión de manzanilla o té de hierbas"
     },
     {
-      "comida": "Media Mañana",
-      "semana": "Yogur natural con semillas de chía (1 taza de yogur natural, 1 cucharada de semillas de chía), 1 pieza de fruta (manzana, pera, naranja)",
-      "finDeSemana": "Smoothie de frutas y vegetales (1 taza de fresas, 1 plátano, 1 taza de espinacas, 1 taza de leche de almendra)"
+      "dia": "Martes",
+      "desayuno": "Avena con frutas y nueces (1 taza de avena, 1 taza de leche, 1 plátano o una manzana, 1 cucharada de nueces picadas), 1 taza de té verde o café sin azúcar",
+      "mediaManana": "Yogur natural con semillas de chía (1 taza de yogur natural, 1 cucharada de semillas de chía), 1 pieza de fruta (manzana, pera, naranja)",
+      "almuerzo": "Pollo a la parrilla con quinoa y vegetales (150g de pechuga de pollo a la parrilla, 1 taza de quinoa cocida, 1 taza de brócoli al vapor y zanahorias), Ensalada de hojas verdes con tomate, pepino y aguacate (Aliño: 1 cucharada de aceite de oliva y jugo de limón)",
+      "merienda": "Batido de proteínas (opcional) (1 scoop de proteína en polvo, 1 taza de leche o agua, 1 puñado de espinacas, 1 plátano)",
+      "cena": "Tortilla de vegetales con espinacas y champiñones (3 claras de huevo y 1 huevo entero, 1 taza de espinacas, 1/2 taza de champiñones), 1 rebanada de pan integral tostado",
+      "antesDeDormir": "Infusión de manzanilla o té de hierbas"
     },
     {
-      "comida": "Almuerzo",
-      "semana": "Pollo a la parrilla con quinoa y vegetales (150g de pechuga de pollo a la parrilla, 1 taza de quinoa cocida, 1 taza de brócoli al vapor y zanahorias), Ensalada de hojas verdes con tomate, pepino y aguacate (Aliño: 1 cucharada de aceite de oliva y jugo de limón)",
-      "finDeSemana": "Ensalada de pollo y garbanzos (150g de pechuga de pollo a la parrilla, 1 taza de garbanzos cocidos, 1 taza de lechuga, tomate, pepino y zanahoria rallada, Aliño: 1 cucharada de aceite de oliva y vinagre balsámico)"
+      "dia": "Miércoles",
+      "desayuno": "Avena con frutas y nueces (1 taza de avena, 1 taza de leche, 1 plátano o una manzana, 1 cucharada de nueces picadas), 1 taza de té verde o café sin azúcar",
+      "mediaManana": "Yogur natural con semillas de chía (1 taza de yogur natural, 1 cucharada de semillas de chía), 1 pieza de fruta (manzana, pera, naranja)",
+      "almuerzo": "Pollo a la parrilla con quinoa y vegetales (150g de pechuga de pollo a la parrilla, 1 taza de quinoa cocida, 1 taza de brócoli al vapor y zanahorias), Ensalada de hojas verdes con tomate, pepino y aguacate (Aliño: 1 cucharada de aceite de oliva y jugo de limón)",
+      "merienda": "Batido de proteínas (opcional) (1 scoop de proteína en polvo, 1 taza de leche o agua, 1 puñado de espinacas, 1 plátano)",
+      "cena": "Tortilla de vegetales con espinacas y champiñones (3 claras de huevo y 1 huevo entero, 1 taza de espinacas, 1/2 taza de champiñones), 1 rebanada de pan integral tostado",
+      "antesDeDormir": "Infusión de manzanilla o té de hierbas"
     },
     {
-      "comida": "Merienda",
-      "semana": "Batido de proteínas (opcional) (1 scoop de proteína en polvo, 1 taza de leche o agua, 1 puñado de espinacas, 1 plátano)",
-      "finDeSemana": "Hummus con palitos de zanahoria y apio (2 cucharadas de hummus, 1 taza de palitos de zanahoria y apio)"
+      "dia": "Jueves",
+      "desayuno": "Avena con frutas y nueces (1 taza de avena, 1 taza de leche, 1 plátano o una manzana, 1 cucharada de nueces picadas), 1 taza de té verde o café sin azúcar",
+      "mediaManana": "Yogur natural con semillas de chía (1 taza de yogur natural, 1 cucharada de semillas de chía), 1 pieza de fruta (manzana, pera, naranja)",
+      "almuerzo": "Pollo a la parrilla con quinoa y vegetales (150g de pechuga de pollo a la parrilla, 1 taza de quinoa cocida, 1 taza de brócoli al vapor y zanahorias), Ensalada de hojas verdes con tomate, pepino y aguacate (Aliño: 1 cucharada de aceite de oliva y jugo de limón)",
+      "merienda": "Batido de proteínas (opcional) (1 scoop de proteína en polvo, 1 taza de leche o agua, 1 puñado de espinacas, 1 plátano)",
+      "cena": "Tortilla de vegetales con espinacas y champiñones (3 claras de huevo y 1 huevo entero, 1 taza de espinacas, 1/2 taza de champiñones), 1 rebanada de pan integral tostado",
+      "antesDeDormir": "Infusión de manzanilla o té de hierbas"
     },
     {
-      "comida": "Cena",
-      "semana": "Tortilla de vegetales con espinacas y champiñones (3 claras de huevo y 1 huevo entero, 1 taza de espinacas, 1/2 taza de champiñones), 1 rebanada de pan integral tostado",
-      "finDeSemana": "Filete de ternera magra con puré de coliflor (150g de filete de ternera magra, 1 taza de puré de coliflor), Ensalada de rúcula y tomate cherry"
+      "dia": "Viernes",
+      "desayuno": "Avena con frutas y nueces (1 taza de avena, 1 taza de leche, 1 plátano o una manzana, 1 cucharada de nueces picadas), 1 taza de té verde o café sin azúcar",
+      "mediaManana": "Yogur natural con semillas de chía (1 taza de yogur natural, 1 cucharada de semillas de chía), 1 pieza de fruta (manzana, pera, naranja)",
+      "almuerzo": "Pollo a la parrilla con quinoa y vegetales (150g de pechuga de pollo a la parrilla, 1 taza de quinoa cocida, 1 taza de brócoli al vapor y zanahorias), Ensalada de hojas verdes con tomate, pepino y aguacate (Aliño: 1 cucharada de aceite de oliva y jugo de limón)",
+      "merienda": "Batido de proteínas (opcional) (1 scoop de proteína en polvo, 1 taza de leche o agua, 1 puñado de espinacas, 1 plátano)",
+      "cena": "Tortilla de vegetales con espinacas y champiñones (3 claras de huevo y 1 huevo entero, 1 taza de espinacas, 1/2 taza de champiñones), 1 rebanada de pan integral tostado",
+      "antesDeDormir": "Infusión de manzanilla o té de hierbas"
     },
     {
-      "comida": "Antes de Dormir",
-      "semana": "Infusión de manzanilla o té de hierbas",
-      "finDeSemana": "Infusión de manzanilla o té de hierbas"
-    }
-  ]
-}
+      "dia": "Sábado",
+      "desayuno": "Tostadas integrales con aguacate y huevo pochado (2 rebanadas de pan integral, 1/2 aguacate, 1 huevo pochado), 1 taza de café o té sin azúcar",
+      "mediaManana": "Smoothie de frutas y vegetales (1 taza de fresas, 1 plátano, 1 taza de espinacas, 1 taza de leche de almendra)",
+      "almuerzo": "Ensalada de pollo y garbanzos (150g de pechuga de pollo a la parrilla, 1 taza de garbanzos cocidos, 1 taza de lechuga, tomate, pepino y zanahoria rallada, Aliño: 1 cucharada de aceite de oliva y vinagre balsámico)",
+      "merienda": "Hummus con palitos de zanahoria y apio (2 cucharadas de hummus, 1 taza de palitos de zanahoria y apio)",
+      "cena": "Filete de ternera magra con puré de coliflor (150g de filete de ternera magra, 1 taza de puré de coliflor), Ensalada de rúcula y tomate cherry",
+      "antesDeDormir": "Infusión de manzanilla o té de hierbas"
+    },
+    {
+      "dia": "Domingo",
+      "desayuno": "Tostadas integrales con aguacate y huevo pochado (2 rebanadas de pan integral, 1/2 aguacate, 1 huevo pochado), 1 taza de café o té sin azúcar",
+      "mediaManana": "Smoothie de frutas y vegetales (1 taza de fresas, 1 plátano, 1 taza de espinacas, 1 taza de leche de almendra)",
+      "almuerzo": "Ensalada de pollo y garbanzos (150g de pechuga de pollo a la parrilla, 1 taza de garbanzos cocidos, 1 taza de lechuga, tomate, pepino y zanahoria rallada, Aliño: 1 cucharada de aceite de oliva y vinagre balsámico)",
+      "merienda": "Hummus con palitos de zanahoria y apio (2 cucharadas de hummus, 1 taza de palitos de zanahoria y apio)",
+      "cena": "Filete de ternera magra con puré de coliflor (150g de filete de ternera magra, 1 taza de puré de coliflor), Ensalada de rúcula y tomate cherry",
+      "antesDeDormir": "Infusión de manzanilla o té de hierbas"
+      }
+      ]
+      }
