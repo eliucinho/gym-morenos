@@ -1,0 +1,34 @@
+{
+  "rutina": [
+    {
+      "dia": "Lunes",
+      "calentamiento": "Elíptica 10 minutos",
+      "ejercicios": [
+        "Bíceps con mancuernas: 5kg x 20 rep x 3 series",
+        "Tríceps con mancuernas: 5kg x 10 rep x 3 series",
+        "Pecho seated chest press: 25 kg x 20 rep x 3 series",
+        "Bíceps curl: 10kg x 20 rep x 3 series",
+        "Tríceps con cuerdas: 10kg x 15 rep x 3 series",
+        "Pecho incline chest press: 20 kg x 10 rep x 3 series",
+        "Pecho butterfly: 15kg x 15 rep x 3 series"
+      ],
+      "cardio": "Elíptica 30 minutos",
+      "estiramientos": "Estiramientos de brazos, pecho y piernas"
+    },
+    {
+      "dia": "Martes",
+      "calentamiento": "Cinta de correr 10 minutos",
+      "ejercicios": [
+        "Remo con barra: 20kg x 15 rep x 3 series",
+        "Elevaciones laterales con mancuernas: 5kg x 15 rep x 3 series",
+        "Jalón al pecho: 25kg x 15 rep x 3 series",
+        "Press militar con mancuernas: 10kg x 15 rep x 3 series",
+        "Remo con mancuernas: 10kg x 15 rep x 3 series",
+        "Elevaciones frontales con mancuernas: 5kg x 15 rep x 3 series"
+      ],
+      "cardio": "Elíptica 20 minutos",
+      "estiramientos": "Estiramientos de espalda y hombros"
+    }
+    // Agregar los demás días
+  ]
+}
