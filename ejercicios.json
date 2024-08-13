@@ -4,13 +4,62 @@
       "dia": "Lunes",
       "calentamiento": "Elíptica 10 minutos",
       "ejercicios": [
-        "Bíceps con mancuernas: 5kg x 20 rep x 3 series",
-        "Tríceps con mancuernas: 5kg x 10 rep x 3 series",
-        "Pecho seated chest press: 25 kg x 20 rep x 3 series",
-        "Bíceps curl: 10kg x 20 rep x 3 series",
-        "Tríceps con cuerdas: 10kg x 15 rep x 3 series",
-        "Pecho incline chest press: 20 kg x 10 rep x 3 series",
-        "Pecho butterfly: 15kg x 15 rep x 3 series"
+        {
+          "nombre": "Bíceps con mancuernas",
+          "peso": "5kg",
+          "numeroRepeticion": 20,
+          "series": 3,
+          "objetivo": "Bíceps",
+          "nivel": "Principiante"
+        },
+        {
+          "nombre": "Tríceps con mancuernas",
+          "peso": "5kg",
+          "numeroRepeticion": 10,
+          "series": 3,
+          "objetivo": "Tríceps",
+          "nivel": "Principiante"
+        },
+        {
+          "nombre": "Pecho seated chest press",
+          "peso": "25kg",
+          "numeroRepeticion": 20,
+          "series": 3,
+          "objetivo": "Pecho",
+          "nivel": "Intermediario"
+        },
+        {
+          "nombre": "Bíceps curl",
+          "peso": "10kg",
+          "numeroRepeticion": 20,
+          "series": 3,
+          "objetivo": "Bíceps",
+          "nivel": "Intermediario"
+        },
+        {
+          "nombre": "Tríceps con cuerdas",
+          "peso": "10kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Tríceps",
+          "nivel": "Intermediario"
+        },
+        {
+          "nombre": "Pecho incline chest press",
+          "peso": "20kg",
+          "numeroRepeticion": 10,
+          "series": 3,
+          "objetivo": "Pecho",
+          "nivel": "Intermediario"
+        },
+        {
+          "nombre": "Pecho butterfly",
+          "peso": "15kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Pecho",
+          "nivel": "Intermediario"
+        }
       ],
       "cardio": "Elíptica 30 minutos",
       "estiramientos": "Estiramientos de brazos, pecho y piernas"
@@ -19,16 +68,265 @@
       "dia": "Martes",
       "calentamiento": "Cinta de correr 10 minutos",
       "ejercicios": [
-        "Remo con barra: 20kg x 15 rep x 3 series",
-        "Elevaciones laterales con mancuernas: 5kg x 15 rep x 3 series",
-        "Jalón al pecho: 25kg x 15 rep x 3 series",
-        "Press militar con mancuernas: 10kg x 15 rep x 3 series",
-        "Remo con mancuernas: 10kg x 15 rep x 3 series",
-        "Elevaciones frontales con mancuernas: 5kg x 15 rep x 3 series"
+        {
+          "nombre": "Remo con barra",
+          "peso": "20kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Espalda",
+          "nivel": "Intermediario"
+        },
+        {
+          "nombre": "Elevaciones laterales con mancuernas",
+          "peso": "5kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Hombros",
+          "nivel": "Principiante"
+        },
+        {
+          "nombre": "Jalón al pecho",
+          "peso": "25kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Espalda",
+          "nivel": "Intermediario"
+        },
+        {
+          "nombre": "Press militar con mancuernas",
+          "peso": "10kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Hombros",
+          "nivel": "Intermediario"
+        },
+        {
+          "nombre": "Remo con mancuernas",
+          "peso": "10kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Espalda",
+          "nivel": "Intermediario"
+        },
+        {
+          "nombre": "Elevaciones frontales con mancuernas",
+          "peso": "5kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Hombros",
+          "nivel": "Principiante"
+        }
       ],
       "cardio": "Elíptica 20 minutos",
       "estiramientos": "Estiramientos de espalda y hombros"
+    },
+    {
+      "dia": "Miércoles",
+      "calentamiento": "Bicicleta estática 10 minutos",
+      "ejercicios": [
+        {
+          "nombre": "Sentadillas",
+          "peso": "20kg",
+          "numeroRepeticion": 20,
+          "series": 3,
+          "objetivo": "Piernas",
+          "nivel": "Intermediario"
+        },
+        {
+          "nombre": "Prensa de piernas",
+          "peso": "50kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Piernas",
+          "nivel": "Intermediario"
+        },
+        {
+          "nombre": "Curl de piernas",
+          "peso": "25kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Piernas",
+          "nivel": "Intermediario"
+        },
+        {
+          "nombre": "Extensiones de piernas",
+          "peso": "20kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Piernas",
+          "nivel": "Principiante"
+        },
+        {
+          "nombre": "Elevación de talones",
+          "peso": "25kg",
+          "numeroRepeticion": 20,
+          "series": 3,
+          "objetivo": "Pantorrillas",
+          "nivel": "Intermediario"
+        }
+      ],
+      "cardio": "Elíptica 30 minutos",
+      "estiramientos": "Estiramientos de piernas y espalda baja"
+    },
+    {
+      "dia": "Jueves",
+      "calentamiento": "Elíptica 10 minutos",
+      "ejercicios": [
+        {
+          "nombre": "Bíceps con mancuernas",
+          "peso": "5kg",
+          "numeroRepeticion": 20,
+          "series": 3,
+          "objetivo": "Bíceps",
+          "nivel": "Principiante"
+        },
+        {
+          "nombre": "Tríceps con mancuernas",
+          "peso": "5kg",
+          "numeroRepeticion": 10,
+          "series": 3,
+          "objetivo": "Tríceps",
+          "nivel": "Principiante"
+        },
+        {
+          "nombre": "Pecho seated chest press",
+          "peso": "25kg",
+          "numeroRepeticion": 20,
+          "series": 3,
+          "objetivo": "Pecho",
+          "nivel": "Intermediario"
+        },
+        {
+          "nombre": "Bíceps curl",
+          "peso": "10kg",
+          "numeroRepeticion": 20,
+          "series": 3,
+          "objetivo": "Bíceps",
+          "nivel": "Intermediario"
+        },
+        {
+          "nombre": "Tríceps con cuerdas",
+          "peso": "10kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Tríceps",
+          "nivel": "Intermediario"
+        },
+        {
+          "nombre": "Pecho incline chest press",
+          "peso": "20kg",
+          "numeroRepeticion": 10,
+          "series": 3,
+          "objetivo": "Pecho",
+          "nivel": "Intermediario"
+        },
+        {
+          "nombre": "Pecho butterfly",
+          "peso": "15kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Pecho",
+          "nivel": "Intermediario"
+        }
+      ],
+      "cardio": "Elíptica 30 minutos",
+      "estiramientos": "Estiramientos de brazos, pecho y piernas"
+    },
+    {
+      "dia": "Viernes",
+      "calentamiento": "Elíptica 10 minutos",
+      "ejercicios": [
+        {
+          "nombre": "Sentadillas",
+          "peso": "20kg",
+          "numeroRepeticion": 15,
+          "series": 1,
+          "objetivo": "Piernas",
+          "nivel": "Intermediario"
+        },
+        {
+          "nombre": "Press de pecho con mancuernas",
+          "peso": "10kg",
+          "numeroRepeticion": 15,
+          "series": 1,
+          "objetivo": "Pecho",
+          "nivel": "Intermediario"
+        },
+        {
+          "nombre": "Remo con barra",
+          "peso": "20kg",
+          "numeroRepeticion": 15,
+          "series": 1,
+          "objetivo": "Espalda",
+          "nivel": "Intermediario"
+        },
+        {
+          "nombre": "Curl de bíceps con mancuernas",
+          "peso": "10kg",
+        "numeroRepeticion": 15,
+        "series": 1,
+        "objetivo": "Bíceps",
+        "nivel": "Intermediario"
+        },
+        {
+        "nombre": "Tríceps con cuerdas",
+        "peso": "10kg",
+        "numeroRepeticion": 15,
+        "series": 1,
+        "objetivo": "Tríceps",
+        "nivel": "Intermediario"
+        },
+        {
+        "nombre": "Elevaciones laterales con mancuernas",
+        "peso": "5kg",
+        "numeroRepeticion": 15,
+        "series": 1,
+        "objetivo": "Hombros",
+        "nivel": "Principiante"
+        },
+        {
+        "nombre": "Planchas",
+        "peso": "N/A",
+        "numeroRepeticion": 1,
+        "series": 1,
+        "objetivo": "Core",
+        "nivel": "Intermediario"
+        }
+      ],
+        "cardio": "Elíptica 30 minutos",
+        "estiramientos": "Estiramientos completos de cuerpo"
+    },
+    {
+        "dia": "Sábado",
+        "calentamiento": "Descanso activo (Caminatas, Yoga, Estiramientos ligeros)",
+        "ejercicios": [
+        {
+        "nombre": "Descanso activo",
+        "peso": "N/A",
+        "numeroRepeticion": 0,
+        "series": 0,
+        "objetivo": "General",
+        "nivel": "Principiante"
+        }
+      ],
+        "cardio": "N/A",
+        "estiramientos": "Estiramientos ligeros"
+    },
+    {
+        "dia": "Domingo",
+        "calentamiento": "Descanso activo (Caminatas, Yoga, Estiramientos ligeros)",
+        "ejercicios": [
+        {
+        "nombre": "Descanso activo",
+        "peso": "N/A",
+        "numeroRepeticion": 0,
+        "series": 0,
+        "objetivo": "General",
+        "nivel": "Principiante"
+        }
+      ],
+        "cardio": "N/A",
+        "estiramientos": "Estiramientos ligeros"
     }
-    // Agregar los demás días
   ]
 }
