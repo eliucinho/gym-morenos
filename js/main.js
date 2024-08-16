@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Crear las tabs para los días de la semana
     createDayTabs(days, savedDayIndex, function(dayIndex) {
         setSavedDayIndex(dayIndex);
-        updatePanels(dayIndex, exercisesData, foodData, renderCheckableItem);
+        updatePanels(dayIndex, exercisesData, foodData);
         attachStatusButtonHandlers(dayIndex);
     });
 
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(data => {
             exercisesData = data.rutina;
-            updatePanels(savedDayIndex, exercisesData, foodData, renderCheckableItem);
+            updatePanels(savedDayIndex, exercisesData, foodData);
             attachStatusButtonHandlers(savedDayIndex);
         });
 
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(data => {
             foodData = data.comidas;
-            updatePanels(savedDayIndex, exercisesData, foodData, renderCheckableItem);
+            updatePanels(savedDayIndex, exercisesData, foodData);
             attachStatusButtonHandlers(savedDayIndex);
         });
 
@@ -49,7 +49,30 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('restoreDayButton').addEventListener('click', function () {
         const dayIndex = getSavedDayIndex();
         clearStatusItems(dayIndex);
-        updatePanels(dayIndex, exercisesData, foodData, renderCheckableItem);
+        updatePanels(dayIndex, exercisesData, foodData);
         attachStatusButtonHandlers(dayIndex);
     });
 });
+
+function updatePanels(dayIndex, exercisesData, foodData) {
+    if (exercisesData && foodData) {
+        const exercisePanel = document.getElementById('exercisePanel');
+        const foodPanel = document.getElementById('foodPanel');
+
+        // Limpiar los paneles
+        exercisePanel.innerHTML = '';
+        foodPanel.innerHTML = '';
+
+        // Renderizar los ejercicios del día
+        exercisesData[dayIndex].ejercicios.forEach((exercise, index) => {
+            exercisePanel.innerHTML += renderExerciseItem(`Ejercicio ${index + 1}`, exercise, getStatusItems(dayIndex, 'exercise'));
+        });
+
+        // Renderizar las comidas del día
+        Object.keys(foodData[dayIndex]).forEach(mealKey => {
+            if (mealKey !== 'dia') {
+                foodPanel.innerHTML += renderFoodItem(mealKey.charAt(0).toUpperCase() + mealKey.slice(1), foodData[dayIndex][mealKey], getStatusItems(dayIndex, 'food'));
+            }
+        });
+    }
+}

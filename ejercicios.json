@@ -10,7 +10,8 @@
           "numeroRepeticion": 20,
           "series": 3,
           "objetivo": "Bíceps",
-          "nivel": "Principiante"
+          "nivel": "Principiante",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
         },
         {
           "nombre": "Tríceps con mancuernas",
@@ -18,7 +19,8 @@
           "numeroRepeticion": 10,
           "series": 3,
           "objetivo": "Tríceps",
-          "nivel": "Principiante"
+          "nivel": "Principiante",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62822m.mp4"
         },
         {
           "nombre": "Pecho seated chest press",
@@ -26,7 +28,8 @@
           "numeroRepeticion": 20,
           "series": 3,
           "objetivo": "Pecho",
-          "nivel": "Intermediario"
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
         },
         {
           "nombre": "Bíceps curl",
@@ -34,7 +37,8 @@
           "numeroRepeticion": 20,
           "series": 3,
           "objetivo": "Bíceps",
-          "nivel": "Intermediario"
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
         },
         {
           "nombre": "Tríceps con cuerdas",
@@ -42,7 +46,8 @@
           "numeroRepeticion": 15,
           "series": 3,
           "objetivo": "Tríceps",
-          "nivel": "Intermediario"
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62822m.mp4"
         },
         {
           "nombre": "Pecho incline chest press",
@@ -50,7 +55,8 @@
           "numeroRepeticion": 10,
           "series": 3,
           "objetivo": "Pecho",
-          "nivel": "Intermediario"
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
         },
         {
           "nombre": "Pecho butterfly",
@@ -58,7 +64,8 @@
           "numeroRepeticion": 15,
           "series": 3,
           "objetivo": "Pecho",
-          "nivel": "Intermediario"
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
         }
       ],
       "cardio": "Elíptica 30 minutos",
@@ -74,7 +81,8 @@
           "numeroRepeticion": 15,
           "series": 3,
           "objetivo": "Espalda",
-          "nivel": "Intermediario"
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62782m.mp4" 
         },
         {
           "nombre": "Elevaciones laterales con mancuernas",
@@ -82,7 +90,8 @@
           "numeroRepeticion": 15,
           "series": 3,
           "objetivo": "Hombros",
-          "nivel": "Principiante"
+          "nivel": "Principiante",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62812m.mp4" 
         },
         {
           "nombre": "Jalón al pecho",
@@ -90,7 +99,8 @@
           "numeroRepeticion": 15,
           "series": 3,
           "objetivo": "Espalda",
-          "nivel": "Intermediario"
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62832m.mp4" 
         },
         {
           "nombre": "Press militar con mancuernas",
@@ -98,7 +108,8 @@
           "numeroRepeticion": 15,
           "series": 3,
           "objetivo": "Hombros",
-          "nivel": "Intermediario"
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62842m.mp4" 
         },
         {
           "nombre": "Remo con mancuernas",
@@ -106,7 +117,8 @@
           "numeroRepeticion": 15,
           "series": 3,
           "objetivo": "Espalda",
-          "nivel": "Intermediario"
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62852m.mp4" 
         },
         {
           "nombre": "Elevaciones frontales con mancuernas",
@@ -114,7 +126,8 @@
           "numeroRepeticion": 15,
           "series": 3,
           "objetivo": "Hombros",
-          "nivel": "Principiante"
+          "nivel": "Principiante",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62812m.mp4" 
         }
       ],
       "cardio": "Elíptica 20 minutos",
@@ -130,7 +143,8 @@
           "numeroRepeticion": 20,
           "series": 3,
           "objetivo": "Piernas",
-          "nivel": "Intermediario"
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62862m.mp4" 
         },
         {
           "nombre": "Prensa de piernas",
@@ -138,7 +152,8 @@
           "numeroRepeticion": 15,
           "series": 3,
           "objetivo": "Piernas",
-          "nivel": "Intermediario"
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62872m.mp4" 
         },
         {
           "nombre": "Curl de piernas",
@@ -146,7 +161,8 @@
           "numeroRepeticion": 15,
           "series": 3,
           "objetivo": "Piernas",
-          "nivel": "Intermediario"
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62882m.mp4" 
         },
         {
           "nombre": "Extensiones de piernas",
@@ -154,7 +170,8 @@
           "numeroRepeticion": 15,
           "series": 3,
           "objetivo": "Piernas",
-          "nivel": "Principiante"
+          "nivel": "Principiante",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62892m.mp4"
         },
         {
           "nombre": "Elevación de talones",
@@ -162,7 +179,8 @@
           "numeroRepeticion": 20,
           "series": 3,
           "objetivo": "Pantorrillas",
-          "nivel": "Intermediario"
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62902m.mp4" 
         }
       ],
       "cardio": "Elíptica 30 minutos",
@@ -178,7 +196,8 @@
           "numeroRepeticion": 20,
           "series": 3,
           "objetivo": "Bíceps",
-          "nivel": "Principiante"
+          "nivel": "Principiante",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4" 
         },
         {
           "nombre": "Tríceps con mancuernas",
@@ -186,7 +205,8 @@
           "numeroRepeticion": 10,
           "series": 3,
           "objetivo": "Tríceps",
-          "nivel": "Principiante"
+          "nivel": "Principiante",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62822m.mp4"
         },
         {
           "nombre": "Pecho seated chest press",
@@ -194,7 +214,8 @@
           "numeroRepeticion": 20,
           "series": 3,
           "objetivo": "Pecho",
-          "nivel": "Intermediario"
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
         },
         {
           "nombre": "Bíceps curl",
@@ -202,7 +223,8 @@
           "numeroRepeticion": 20,
           "series": 3,
           "objetivo": "Bíceps",
-          "nivel": "Intermediario"
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
         },
         {
           "nombre": "Tríceps con cuerdas",
@@ -210,7 +232,8 @@
           "numeroRepeticion": 15,
           "series": 3,
           "objetivo": "Tríceps",
-          "nivel": "Intermediario"
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62822m.mp4" 
         },
         {
           "nombre": "Pecho incline chest press",
@@ -218,7 +241,8 @@
           "numeroRepeticion": 10,
           "series": 3,
           "objetivo": "Pecho",
-          "nivel": "Intermediario"
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
         },
         {
           "nombre": "Pecho butterfly",
@@ -226,7 +250,8 @@
           "numeroRepeticion": 15,
           "series": 3,
           "objetivo": "Pecho",
-          "nivel": "Intermediario"
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
         }
       ],
       "cardio": "Elíptica 30 minutos",
@@ -242,7 +267,8 @@
           "numeroRepeticion": 15,
           "series": 1,
           "objetivo": "Piernas",
-          "nivel": "Intermediario"
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62862m.mp4" 
         },
         {
           "nombre": "Press de pecho con mancuernas",
@@ -250,7 +276,8 @@
           "numeroRepeticion": 15,
           "series": 1,
           "objetivo": "Pecho",
-          "nivel": "Intermediario"
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4" 
         },
         {
           "nombre": "Remo con barra",
@@ -258,75 +285,82 @@
           "numeroRepeticion": 15,
           "series": 1,
           "objetivo": "Espalda",
-          "nivel": "Intermediario"
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62782m.mp4" 
         },
         {
           "nombre": "Curl de bíceps con mancuernas",
           "peso": "10kg",
-        "numeroRepeticion": 15,
-        "series": 1,
-        "objetivo": "Bíceps",
-        "nivel": "Intermediario"
+          "numeroRepeticion": 15,
+          "series": 1,
+          "objetivo": "Bíceps",
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
         },
         {
-        "nombre": "Tríceps con cuerdas",
-        "peso": "10kg",
-        "numeroRepeticion": 15,
-        "series": 1,
-        "objetivo": "Tríceps",
-        "nivel": "Intermediario"
+          "nombre": "Tríceps con cuerdas",
+          "peso": "10kg",
+          "numeroRepeticion": 15,
+          "series": 1,
+          "objetivo": "Tríceps",
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62822m.mp4"
         },
         {
-        "nombre": "Elevaciones laterales con mancuernas",
-        "peso": "5kg",
-        "numeroRepeticion": 15,
-        "series": 1,
-        "objetivo": "Hombros",
-        "nivel": "Principiante"
+          "nombre": "Elevaciones laterales con mancuernas",
+          "peso": "5kg",
+          "numeroRepeticion": 15,
+          "series": 1,
+          "objetivo": "Hombros",
+          "nivel": "Principiante",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62812m.mp4"
         },
         {
-        "nombre": "Planchas",
-        "peso": "N/A",
-        "numeroRepeticion": 1,
-        "series": 1,
-        "objetivo": "Core",
-        "nivel": "Intermediario"
+          "nombre": "Planchas",
+          "peso": "N/A",
+          "numeroRepeticion": 1,
+          "series": 1,
+          "objetivo": "Core",
+          "nivel": "Intermediario",
+          "video": "https://videos.bodybuilding.com/video/mp4/62000/62912m.mp4"
         }
       ],
-        "cardio": "Elíptica 30 minutos",
-        "estiramientos": "Estiramientos completos de cuerpo"
+      "cardio": "Elíptica 30 minutos",
+      "estiramientos": "Estiramientos completos de cuerpo"
     },
     {
-        "dia": "Sábado",
-        "calentamiento": "Descanso activo (Caminatas, Yoga, Estiramientos ligeros)",
-        "ejercicios": [
+      "dia": "Sábado",
+      "calentamiento": "Descanso activo (Caminatas, Yoga, Estiramientos ligeros)",
+      "ejercicios": [
         {
-        "nombre": "Descanso activo",
-        "peso": "N/A",
-        "numeroRepeticion": 0,
-        "series": 0,
-        "objetivo": "General",
-        "nivel": "Principiante"
+          "nombre": "Descanso activo",
+          "peso": "N/A",
+          "numeroRepeticion": 0,
+          "series": 0,
+          "objetivo": "General",
+          "nivel": "Principiante",
+          "video": ""
         }
       ],
-        "cardio": "N/A",
-        "estiramientos": "Estiramientos ligeros"
+      "cardio": "N/A",
+      "estiramientos": "Estiramientos ligeros"
     },
     {
-        "dia": "Domingo",
-        "calentamiento": "Descanso activo (Caminatas, Yoga, Estiramientos ligeros)",
-        "ejercicios": [
+      "dia": "Domingo",
+      "calentamiento": "Descanso activo (Caminatas, Yoga, Estiramientos ligeros)",
+      "ejercicios": [
         {
-        "nombre": "Descanso activo",
-        "peso": "N/A",
-        "numeroRepeticion": 0,
-        "series": 0,
-        "objetivo": "General",
-        "nivel": "Principiante"
+          "nombre": "Descanso activo",
+          "peso": "N/A",
+          "numeroRepeticion": 0,
+          "series": 0,
+          "objetivo": "General",
+          "nivel": "Principiante",
+          "video": ""
         }
       ],
-        "cardio": "N/A",
-        "estiramientos": "Estiramientos ligeros"
+      "cardio": "N/A",
+      "estiramientos": "Estiramientos ligeros"
     }
   ]
 }

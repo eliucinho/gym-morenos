@@ -2,66 +2,449 @@
   "comidas": [
     {
       "dia": "Lunes",
-      "desayuno": "Avena con frutas y nueces (1 taza de avena, 1 taza de leche, 1 plátano o una manzana, 1 cucharada de nueces picadas), 1 taza de té verde o café sin azúcar",
-      "mediaManana": "Yogur natural con semillas de chía (1 taza de yogur natural, 1 cucharada de semillas de chía), 1 pieza de fruta (manzana, pera, naranja)",
-      "almuerzo": "Pollo a la parrilla con quinoa y vegetales (150g de pechuga de pollo a la parrilla, 1 taza de quinoa cocida, 1 taza de brócoli al vapor y zanahorias), Ensalada de hojas verdes con tomate, pepino y aguacate (Aliño: 1 cucharada de aceite de oliva y jugo de limón)",
-      "merienda": "Batido de proteínas (opcional) (1 scoop de proteína en polvo, 1 taza de leche o agua, 1 puñado de espinacas, 1 plátano)",
-      "cena": "Tortilla de vegetales con espinacas y champiñones (3 claras de huevo y 1 huevo entero, 1 taza de espinacas, 1/2 taza de champiñones), 1 rebanada de pan integral tostado",
-      "antesDeDormir": "Infusión de manzanilla o té de hierbas"
+      "desayuno": {
+        "nombre": "Avena con frutas y nueces",
+        "ingredientes": [
+          "1 taza de avena",
+          "1 taza de leche",
+          "1 plátano o una manzana",
+          "1 cucharada de nueces picadas"
+        ],
+        "foto": "https://example.com/path/to/avena.jpg",
+        "video": ""
+      },
+      "mediaManana": {
+        "nombre": "Yogur natural con semillas de chía",
+        "ingredientes": [
+          "1 taza de yogur natural",
+          "1 cucharada de semillas de chía",
+          "1 pieza de fruta (manzana, pera, naranja)"
+        ],
+        "foto": "https://example.com/path/to/yogur.jpg",
+        "video": ""
+      },
+      "almuerzo": {
+        "nombre": "Pollo a la parrilla con quinoa y vegetales",
+        "ingredientes": [
+          "150g de pechuga de pollo a la parrilla",
+          "1 taza de quinoa cocida",
+          "1 taza de brócoli al vapor",
+          "zanahorias",
+          "Ensalada de hojas verdes con tomate, pepino y aguacate (Aliño: 1 cucharada de aceite de oliva y jugo de limón)"
+        ],
+        "foto": "https://example.com/path/to/pollo_quinoa.jpg",
+        "video": ""
+      },
+      "merienda": {
+        "nombre": "Batido de proteínas (opcional)",
+        "ingredientes": [
+          "1 scoop de proteína en polvo",
+          "1 taza de leche o agua",
+          "1 puñado de espinacas",
+          "1 plátano"
+        ],
+        "foto": "",
+        "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
+      },
+      "cena": {
+        "nombre": "Tortilla de vegetales con espinacas y champiñones",
+        "ingredientes": [
+          "3 claras de huevo y 1 huevo entero",
+          "1 taza de espinacas",
+          "1/2 taza de champiñones",
+          "1 rebanada de pan integral tostado"
+        ],
+        "foto": "",
+        "video": "https://videos.bodybuilding.com/video/mp4/62000/62862m.mp4"
+      },
+      "antesDeDormir": {
+        "nombre": "Infusión de manzanilla o té de hierbas",
+        "ingredientes": [],
+        "foto": "https://example.com/path/to/te.jpg",
+        "video": ""
+      }
     },
     {
       "dia": "Martes",
-      "desayuno": "Avena con frutas y nueces (1 taza de avena, 1 taza de leche, 1 plátano o una manzana, 1 cucharada de nueces picadas), 1 taza de té verde o café sin azúcar",
-      "mediaManana": "Yogur natural con semillas de chía (1 taza de yogur natural, 1 cucharada de semillas de chía), 1 pieza de fruta (manzana, pera, naranja)",
-      "almuerzo": "Pollo a la parrilla con quinoa y vegetales (150g de pechuga de pollo a la parrilla, 1 taza de quinoa cocida, 1 taza de brócoli al vapor y zanahorias), Ensalada de hojas verdes con tomate, pepino y aguacate (Aliño: 1 cucharada de aceite de oliva y jugo de limón)",
-      "merienda": "Batido de proteínas (opcional) (1 scoop de proteína en polvo, 1 taza de leche o agua, 1 puñado de espinacas, 1 plátano)",
-      "cena": "Tortilla de vegetales con espinacas y champiñones (3 claras de huevo y 1 huevo entero, 1 taza de espinacas, 1/2 taza de champiñones), 1 rebanada de pan integral tostado",
-      "antesDeDormir": "Infusión de manzanilla o té de hierbas"
+      "desayuno": {
+        "nombre": "Avena con frutas y nueces",
+        "ingredientes": [
+          "1 taza de avena",
+          "1 taza de leche",
+          "1 plátano o una manzana",
+          "1 cucharada de nueces picadas"
+        ],
+        "foto": "https://example.com/path/to/avena.jpg",
+        "video": ""
+      },
+      "mediaManana": {
+        "nombre": "Yogur natural con semillas de chía",
+        "ingredientes": [
+          "1 taza de yogur natural",
+          "1 cucharada de semillas de chía",
+          "1 pieza de fruta (manzana, pera, naranja)"
+        ],
+        "foto": "https://example.com/path/to/yogur.jpg",
+        "video": ""
+      },
+      "almuerzo": {
+        "nombre": "Pollo a la parrilla con quinoa y vegetales",
+        "ingredientes": [
+          "150g de pechuga de pollo a la parrilla",
+          "1 taza de quinoa cocida",
+          "1 taza de brócoli al vapor",
+          "zanahorias",
+          "Ensalada de hojas verdes con tomate, pepino y aguacate (Aliño: 1 cucharada de aceite de oliva y jugo de limón)"
+        ],
+        "foto": "https://example.com/path/to/pollo_quinoa.jpg",
+        "video": ""
+      },
+      "merienda": {
+        "nombre": "Batido de proteínas (opcional)",
+        "ingredientes": [
+          "1 scoop de proteína en polvo",
+          "1 taza de leche o agua",
+          "1 puñado de espinacas",
+          "1 plátano"
+        ],
+        "foto": "",
+        "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
+      },
+      "cena": {
+        "nombre": "Tortilla de vegetales con espinacas y champiñones",
+        "ingredientes": [
+          "3 claras de huevo y 1 huevo entero",
+          "1 taza de espinacas",
+          "1/2 taza de champiñones",
+          "1 rebanada de pan integral tostado"
+        ],
+        "foto": "",
+        "video": "https://videos.bodybuilding.com/video/mp4/62000/62862m.mp4"
+      },
+      "antesDeDormir": {
+        "nombre": "Infusión de manzanilla o té de hierbas",
+        "ingredientes": [],
+        "foto": "https://example.com/path/to/te.jpg",
+        "video": ""
+      }
     },
     {
       "dia": "Miércoles",
-      "desayuno": "Avena con frutas y nueces (1 taza de avena, 1 taza de leche, 1 plátano o una manzana, 1 cucharada de nueces picadas), 1 taza de té verde o café sin azúcar",
-      "mediaManana": "Yogur natural con semillas de chía (1 taza de yogur natural, 1 cucharada de semillas de chía), 1 pieza de fruta (manzana, pera, naranja)",
-      "almuerzo": "Pollo a la parrilla con quinoa y vegetales (150g de pechuga de pollo a la parrilla, 1 taza de quinoa cocida, 1 taza de brócoli al vapor y zanahorias), Ensalada de hojas verdes con tomate, pepino y aguacate (Aliño: 1 cucharada de aceite de oliva y jugo de limón)",
-      "merienda": "Batido de proteínas (opcional) (1 scoop de proteína en polvo, 1 taza de leche o agua, 1 puñado de espinacas, 1 plátano)",
-      "cena": "Tortilla de vegetales con espinacas y champiñones (3 claras de huevo y 1 huevo entero, 1 taza de espinacas, 1/2 taza de champiñones), 1 rebanada de pan integral tostado",
-      "antesDeDormir": "Infusión de manzanilla o té de hierbas"
+      "desayuno": {
+        "nombre": "Avena con frutas y nueces",
+        "ingredientes": [
+          "1 taza de avena",
+          "1 taza de leche",
+          "1 plátano o una manzana",
+          "1 cucharada de nueces picadas"
+        ],
+        "foto": "https://example.com/path/to/avena.jpg",
+        "video": ""
+      },
+      "mediaManana": {
+        "nombre": "Yogur natural con semillas de chía",
+        "ingredientes": [
+          "1 taza de yogur natural",
+          "1 cucharada de semillas de chía",
+          "1 pieza de fruta (manzana, pera, naranja)"
+        ],
+        "foto": "https://example.com/path/to/yogur.jpg",
+        "video": ""
+      },
+      "almuerzo": {
+        "nombre": "Pollo a la parrilla con quinoa y vegetales",
+        "ingredientes": [
+          "150g de pechuga de pollo a la parrilla",
+          "1 taza de quinoa cocida",
+          "1 taza de brócoli al vapor",
+          "zanahorias",
+          "Ensalada de hojas verdes con tomate, pepino y aguacate (Aliño: 1 cucharada de aceite de oliva y jugo de limón)"
+        ],
+        "foto": "https://example.com/path/to/pollo_quinoa.jpg",
+        "video": ""
+      },
+      "merienda": {
+        "nombre": "Batido de proteínas (opcional)",
+        "ingredientes": [
+          "1 scoop de proteína en polvo",
+          "1 taza de leche o agua",
+          "1 puñado de espinacas",
+          "1 plátano"
+        ],
+        "foto": "",
+        "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
+      },
+      "cena": {
+        "nombre": "Tortilla de vegetales con espinacas y champiñones",
+        "ingredientes": [
+          "3 claras de huevo y 1 huevo entero",
+          "1 taza de espinacas",
+          "1/2 taza de champiñones",
+          "1 rebanada de pan integral tostado"
+        ],
+        "foto": "",
+        "video": "https://videos.bodybuilding.com/video/mp4/62000/62862m.mp4"
+      },
+      "antesDeDormir": {
+        "nombre": "Infusión de manzanilla o té de hierbas",
+        "ingredientes": [],
+        "foto": "https://example.com/path/to/te.jpg",
+        "video": ""
+      }
     },
     {
       "dia": "Jueves",
-      "desayuno": "Avena con frutas y nueces (1 taza de avena, 1 taza de leche, 1 plátano o una manzana, 1 cucharada de nueces picadas), 1 taza de té verde o café sin azúcar",
-      "mediaManana": "Yogur natural con semillas de chía (1 taza de yogur natural, 1 cucharada de semillas de chía), 1 pieza de fruta (manzana, pera, naranja)",
-      "almuerzo": "Pollo a la parrilla con quinoa y vegetales (150g de pechuga de pollo a la parrilla, 1 taza de quinoa cocida, 1 taza de brócoli al vapor y zanahorias), Ensalada de hojas verdes con tomate, pepino y aguacate (Aliño: 1 cucharada de aceite de oliva y jugo de limón)",
-      "merienda": "Batido de proteínas (opcional) (1 scoop de proteína en polvo, 1 taza de leche o agua, 1 puñado de espinacas, 1 plátano)",
-      "cena": "Tortilla de vegetales con espinacas y champiñones (3 claras de huevo y 1 huevo entero, 1 taza de espinacas, 1/2 taza de champiñones), 1 rebanada de pan integral tostado",
-      "antesDeDormir": "Infusión de manzanilla o té de hierbas"
+      "desayuno": {
+        "nombre": "Avena con frutas y nueces",
+        "ingredientes": [
+          "1 taza de avena",
+          "1 taza de leche",
+          "1 plátano o una manzana",
+          "1 cucharada de nueces picadas"
+        ],
+        "foto": "https://example.com/path/to/avena.jpg",
+        "video": ""
+      },
+      "mediaManana": {
+        "nombre": "Yogur natural con semillas de chía",
+        "ingredientes": [
+          "1 taza de yogur natural",
+          "1 cucharada de semillas de chía",
+          "1 pieza de fruta (manzana, pera, naranja)"
+        ],
+        "foto": "https://example.com/path/to/yogur.jpg",
+        "video": ""
+      },
+      "almuerzo": {
+        "nombre": "Pollo a la parrilla con quinoa y vegetales",
+        "ingredientes": [
+          "150g de pechuga de pollo a la parrilla",
+          "1 taza de quinoa cocida",
+          "1 taza de brócoli al vapor",
+          "zanahorias",
+          "Ensalada de hojas verdes con tomate, pepino y aguacate (Aliño: 1 cucharada de aceite de oliva y jugo de limón)"
+        ],
+        "foto": "https://example.com/path/to/pollo_quinoa.jpg",
+        "video": ""
+      },
+      "merienda": {
+        "nombre": "Batido de proteínas (opcional)",
+        "ingredientes": [
+          "1 scoop de proteína en polvo",
+          "1 taza de leche o agua",
+          "1 puñado de espinacas",
+          "1 plátano"
+        ],
+        "foto": "",
+        "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
+      },
+      "cena": {
+        "nombre": "Tortilla de vegetales con espinacas y champiñones",
+        "ingredientes": [
+          "3 claras de huevo y 1 huevo entero",
+          "1 taza de espinacas",
+          "1/2 taza de champiñones",
+          "1 rebanada de pan integral tostado"
+        ],
+        "foto": "",
+        "video": "https://videos.bodybuilding.com/video/mp4/62000/62862m.mp4"
+      },
+      "antesDeDormir": {
+        "nombre": "Infusión de manzanilla o té de hierbas",
+        "ingredientes": [],
+        "foto": "https://example.com/path/to/te.jpg",
+        "video": ""
+      }
     },
     {
       "dia": "Viernes",
-      "desayuno": "Avena con frutas y nueces (1 taza de avena, 1 taza de leche, 1 plátano o una manzana, 1 cucharada de nueces picadas), 1 taza de té verde o café sin azúcar",
-      "mediaManana": "Yogur natural con semillas de chía (1 taza de yogur natural, 1 cucharada de semillas de chía), 1 pieza de fruta (manzana, pera, naranja)",
-      "almuerzo": "Pollo a la parrilla con quinoa y vegetales (150g de pechuga de pollo a la parrilla, 1 taza de quinoa cocida, 1 taza de brócoli al vapor y zanahorias), Ensalada de hojas verdes con tomate, pepino y aguacate (Aliño: 1 cucharada de aceite de oliva y jugo de limón)",
-      "merienda": "Batido de proteínas (opcional) (1 scoop de proteína en polvo, 1 taza de leche o agua, 1 puñado de espinacas, 1 plátano)",
-      "cena": "Tortilla de vegetales con espinacas y champiñones (3 claras de huevo y 1 huevo entero, 1 taza de espinacas, 1/2 taza de champiñones), 1 rebanada de pan integral tostado",
-      "antesDeDormir": "Infusión de manzanilla o té de hierbas"
+      "desayuno": {
+        "nombre": "Avena con frutas y nueces",
+        "ingredientes": [
+          "1 taza de avena",
+          "1 taza de leche",
+          "1 plátano o una manzana",
+          "1 cucharada de nueces picadas"
+        ],
+        "foto": "https://example.com/path/to/avena.jpg",
+        "video": ""
+      },
+      "mediaManana": {
+        "nombre": "Yogur natural con semillas de chía",
+        "ingredientes": [
+          "1 taza de yogur natural",
+          "1 cucharada de semillas de chía",
+          "1 pieza de fruta (manzana, pera, naranja)"
+        ],
+        "foto": "https://example.com/path/to/yogur.jpg",
+        "video": ""
+      },
+      "almuerzo": {
+        "nombre": "Pollo a la parrilla con quinoa y vegetales",
+        "ingredientes": [
+          "150g de pechuga de pollo a la parrilla",
+          "1 taza de quinoa cocida",
+          "1 taza de brócoli al vapor",
+          "zanahorias",
+          "Ensalada de hojas verdes con tomate, pepino y aguacate (Aliño: 1 cucharada de aceite de oliva y jugo de limón)"
+        ],
+        "foto": "https://example.com/path/to/pollo_quinoa.jpg",
+        "video": ""
+      },
+      "merienda": {
+        "nombre": "Batido de proteínas (opcional)",
+        "ingredientes": [
+          "1 scoop de proteína en polvo",
+          "1 taza de leche o agua",
+          "1 puñado de espinacas",
+          "1 plátano"
+        ],
+        "foto": "",
+        "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
+      },
+      "cena": {
+        "nombre": "Tortilla de vegetales con espinacas y champiñones",
+        "ingredientes": [
+          "3 claras de huevo y 1 huevo entero",
+          "1 taza de espinacas",
+          "1/2 taza de champiñones",
+          "1 rebanada de pan integral tostado"
+        ],
+        "foto": "",
+        "video": "https://videos.bodybuilding.com/video/mp4/62000/62862m.mp4"
+      },
+      "antesDeDormir": {
+        "nombre": "Infusión de manzanilla o té de hierbas",
+        "ingredientes": [],
+        "foto": "https://example.com/path/to/te.jpg",
+        "video": ""
+      }
     },
     {
       "dia": "Sábado",
-      "desayuno": "Tostadas integrales con aguacate y huevo pochado (2 rebanadas de pan integral, 1/2 aguacate, 1 huevo pochado), 1 taza de café o té sin azúcar",
-      "mediaManana": "Smoothie de frutas y vegetales (1 taza de fresas, 1 plátano, 1 taza de espinacas, 1 taza de leche de almendra)",
-      "almuerzo": "Ensalada de pollo y garbanzos (150g de pechuga de pollo a la parrilla, 1 taza de garbanzos cocidos, 1 taza de lechuga, tomate, pepino y zanahoria rallada, Aliño: 1 cucharada de aceite de oliva y vinagre balsámico)",
-      "merienda": "Hummus con palitos de zanahoria y apio (2 cucharadas de hummus, 1 taza de palitos de zanahoria y apio)",
-      "cena": "Filete de ternera magra con puré de coliflor (150g de filete de ternera magra, 1 taza de puré de coliflor), Ensalada de rúcula y tomate cherry",
-      "antesDeDormir": "Infusión de manzanilla o té de hierbas"
+      "desayuno": {
+        "nombre": "Tostadas integrales con aguacate y huevo pochado",
+        "ingredientes": [
+          "2 rebanadas de pan integral",
+          "1/2 aguacate",
+          "1 huevo pochado"
+        ],
+        "foto": "https://example.com/path/to/tostadas.jpg",
+        "video": ""
+      },
+      "mediaManana": {
+        "nombre": "Smoothie de frutas y vegetales",
+        "ingredientes": [
+          "1 taza de fresas",
+          "1 plátano",
+          "1 taza de espinacas",
+          "1 taza de leche de almendra"
+        ],
+        "foto": "https://example.com/path/to/smoothie.jpg",
+        "video": ""
+      },
+      "almuerzo": {
+        "nombre": "Ensalada de pollo y garbanzos",
+        "ingredientes": [
+          "150g de pechuga de pollo a la parrilla",
+          "1 taza de garbanzos cocidos",
+          "1 taza de lechuga",
+          "tomate",
+          "pepino",
+          "zanahoria rallada",
+          "Aliño: 1 cucharada de aceite de oliva y vinagre balsámico"
+        ],
+        "foto": "https://example.com/path/to/ensalada_pollo.jpg",
+        "video": ""
+      },
+      "merienda": {
+        "nombre": "Hummus con palitos de zanahoria y apio",
+        "ingredientes": [
+          "2 cucharadas de hummus",
+          "1 taza de palitos de zanahoria y apio"
+        ],
+        "foto": "https://example.com/path/to/hummus.jpg",
+        "video": ""
+      },
+      "cena": {
+        "nombre": "Filete de ternera magra con puré de coliflor",
+        "ingredientes": [
+          "150g de filete de ternera magra",
+          "1 taza de puré de coliflor",
+          "Ensalada de rúcula y tomate cherry"
+        ],
+        "foto": "https://example.com/path/to/filete_ternera.jpg",
+        "video": ""
+      },
+      "antesDeDormir": {
+        "nombre": "Infusión de manzanilla o té de hierbas",
+        "ingredientes": [],
+        "foto": "https://example.com/path/to/te.jpg",
+        "video": ""
+      }
     },
     {
       "dia": "Domingo",
-      "desayuno": "Tostadas integrales con aguacate y huevo pochado (2 rebanadas de pan integral, 1/2 aguacate, 1 huevo pochado), 1 taza de café o té sin azúcar",
-      "mediaManana": "Smoothie de frutas y vegetales (1 taza de fresas, 1 plátano, 1 taza de espinacas, 1 taza de leche de almendra)",
-      "almuerzo": "Ensalada de pollo y garbanzos (150g de pechuga de pollo a la parrilla, 1 taza de garbanzos cocidos, 1 taza de lechuga, tomate, pepino y zanahoria rallada, Aliño: 1 cucharada de aceite de oliva y vinagre balsámico)",
-      "merienda": "Hummus con palitos de zanahoria y apio (2 cucharadas de hummus, 1 taza de palitos de zanahoria y apio)",
-      "cena": "Filete de ternera magra con puré de coliflor (150g de filete de ternera magra, 1 taza de puré de coliflor), Ensalada de rúcula y tomate cherry",
-      "antesDeDormir": "Infusión de manzanilla o té de hierbas"
+      "desayuno": {
+        "nombre": "Tostadas integrales con aguacate y huevo pochado",
+        "ingredientes": [
+          "2 rebanadas de pan integral",
+          "1/2 aguacate",
+          "1 huevo pochado"
+        ],
+        "foto": "https://example.com/path/to/tostadas.jpg",
+        "video": ""
+      },
+      "mediaManana": {
+        "nombre": "Smoothie de frutas y vegetales",
+        "ingredientes": [
+          "1 taza de fresas",
+          "1 plátano",
+          "1 taza de espinacas",
+          "1 taza de leche de almendra"
+        ],
+        "foto": "https://example.com/path/to/smoothie.jpg",
+        "video": ""
+      },
+      "almuerzo": {
+        "nombre": "Ensalada de pollo y garbanzos",
+        "ingredientes": [
+          "150g de pechuga de pollo a la parrilla",
+          "1 taza de garbanzos cocidos",
+          "1 taza de lechuga",
+          "tomate",
+          "pepino",
+          "zanahoria rallada",
+          "Aliño: 1 cucharada de aceite de oliva y vinagre balsámico"
+        ],
+        "foto": "https://example.com/path/to/ensalada_pollo.jpg",
+        "video": ""
+      },
+      "merienda": {
+        "nombre": "Hummus con palitos de zanahoria y apio",
+        "ingredientes": [
+          "2 cucharadas de hummus",
+          "1 taza de palitos de zanahoria y apio"
+        ],
+        "foto": "https://example.com/path/to/hummus.jpg",
+        "video": ""
+      },
+      "cena": {
+        "nombre": "Filete de ternera magra con puré de coliflor",
+        "ingredientes": [
+          "150g de filete de ternera magra",
+          "1 taza de puré de coliflor",
+          "Ensalada de rúcula y tomate cherry"
+        ],
+        "foto": "https://example.com/path/to/filete_ternera.jpg",
+        "video": ""
+      },
+      "antesDeDormir": {
+        "nombre": "Infusión de manzanilla o té de hierbas",
+        "ingredientes": [],
+        "foto": "https://example.com/path/to/te.jpg",
+        "video": ""
       }
-      ]
-      }
+    }
+  ]
+}

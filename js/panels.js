@@ -1,25 +1,27 @@
-function updatePanels(dayIndex, exercisesData, foodData, renderCheckableItem) {
+function updatePanels(dayIndex, exercisesData, foodData) {
     const exercisePanel = document.getElementById('exercisePanel');
     const foodPanel = document.getElementById('foodPanel');
 
     const statusExercises = getStatusItems('exercise', dayIndex);
     const statusFood = getStatusItems('food', dayIndex);
 
+    // Renderizar los ejercicios del día
     const dayExercises = exercisesData[dayIndex];
     exercisePanel.innerHTML = `
-        ${renderCheckableItem("Calentamiento", dayExercises.calentamiento, statusExercises, "exercise")}
-        ${dayExercises.ejercicios.map((ejercicio, i) => renderCheckableItem(`Ejercicio ${i+1}`, `${ejercicio.nombre}: ${ejercicio.peso}, ${ejercicio.numeroRepeticion} repeticiones, ${ejercicio.series} series, Objetivo: ${ejercicio.objetivo}, Nivel: ${ejercicio.nivel}`, statusExercises, "exercise")).join('')}
-        ${renderCheckableItem("Cardio", dayExercises.cardio, statusExercises, "exercise")}
-        ${renderCheckableItem("Estiramientos", dayExercises.estiramientos, statusExercises, "exercise")}
+        ${renderExerciseItem("Calentamiento", { nombre: dayExercises.calentamiento }, statusExercises)}
+        ${dayExercises.ejercicios.map((ejercicio, i) => renderExerciseItem(`Ejercicio ${i+1}`, ejercicio, statusExercises)).join('')}
+        ${renderExerciseItem("Cardio", { nombre: dayExercises.cardio }, statusExercises)}
+        ${renderExerciseItem("Estiramientos", { nombre: dayExercises.estiramientos }, statusExercises)}
     `;
 
+    // Renderizar las comidas del día
     const dayFood = foodData[dayIndex];
     foodPanel.innerHTML = `
-        ${renderCheckableItem("Desayuno", dayFood.desayuno, statusFood, "food")}
-        ${renderCheckableItem("Media Mañana", dayFood.mediaManana, statusFood, "food")}
-        ${renderCheckableItem("Almuerzo", dayFood.almuerzo, statusFood, "food")}
-        ${renderCheckableItem("Merienda", dayFood.merienda, statusFood, "food")}
-        ${renderCheckableItem("Cena", dayFood.cena, statusFood, "food")}
-        ${renderCheckableItem("Antes de Dormir", dayFood.antesDeDormir, statusFood, "food")}
+        ${renderFoodItem("Desayuno", dayFood.desayuno, statusFood)}
+        ${renderFoodItem("Media Mañana", dayFood.mediaManana, statusFood)}
+        ${renderFoodItem("Almuerzo", dayFood.almuerzo, statusFood)}
+        ${renderFoodItem("Merienda", dayFood.merienda, statusFood)}
+        ${renderFoodItem("Cena", dayFood.cena, statusFood)}
+        ${renderFoodItem("Antes de Dormir", dayFood.antesDeDormir, statusFood)}
     `;
 }
