@@ -1,21 +1,30 @@
-function updatePanels(dayIndex, exercisesData, foodData) {
+function updatePanels(dayIndex, exercisesData, foodData, renderExerciseItem, renderFoodItem) {
     const exercisePanel = document.getElementById('exercisePanel');
     const foodPanel = document.getElementById('foodPanel');
 
-    const statusExercises = getStatusItems('exercise', dayIndex);
-    const statusFood = getStatusItems('food', dayIndex);
+    if (!exercisesData || !foodData) {
+        console.error("Datos de ejercicios o comida no disponibles");
+        return;
+    }
 
-    // Renderizar los ejercicios del día
-    const dayExercises = exercisesData[dayIndex];
-    exercisePanel.innerHTML = `
-        ${renderExerciseItem("Calentamiento", { nombre: dayExercises.calentamiento }, statusExercises)}
-        ${dayExercises.ejercicios.map((ejercicio, i) => renderExerciseItem(`Ejercicio ${i+1}`, ejercicio, statusExercises)).join('')}
-        ${renderExerciseItem("Cardio", { nombre: dayExercises.cardio }, statusExercises)}
-        ${renderExerciseItem("Estiramientos", { nombre: dayExercises.estiramientos }, statusExercises)}
-    `;
+    const statusExercises = getStatusItems('exercise', dayIndex) || {};
+    const statusFood = getStatusItems('food', dayIndex) || {};
 
-    // Renderizar las comidas del día
-    const dayFood = foodData[dayIndex];
+    const dayExercises = exercisesData[dayIndex]?.ejercicios || [];
+
+    // Ordenar los ejercicios según su tipo
+    const sortedExercises = [
+        ...dayExercises.filter(exercise => exercise.tipo === 'calentamiento'),
+        ...dayExercises.filter(exercise => exercise.tipo === 'ejercicio'),
+        ...dayExercises.filter(exercise => exercise.tipo === 'cardio'),
+        ...dayExercises.filter(exercise => exercise.tipo === 'estiramiento')
+    ];
+
+    exercisePanel.innerHTML = sortedExercises.map((exercise, i) =>
+        renderExerciseItem(`Ejercicio ${i + 1}`, exercise, statusExercises)
+    ).join('');
+
+    const dayFood = foodData[dayIndex] || {};
     foodPanel.innerHTML = `
         ${renderFoodItem("Desayuno", dayFood.desayuno, statusFood)}
         ${renderFoodItem("Media Mañana", dayFood.mediaManana, statusFood)}

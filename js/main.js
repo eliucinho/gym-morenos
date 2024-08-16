@@ -1,7 +1,33 @@
+let exercisesData, foodData;
+
+function attachStatusButtonHandlers(dayIndex) {
+    document.addEventListener('click', function(event) {
+        if (event.target && event.target.classList.contains('status-button')) {
+            const button = event.target;
+            const itemType = button.getAttribute('data-type');
+            const itemName = button.getAttribute('data-name');
+            const currentState = button.getAttribute('data-state');
+
+            let newState;
+            if (currentState === 'pendiente') {
+                newState = 'hecho';
+            } else if (currentState === 'hecho') {
+                newState = 'omitido';
+            } else {
+                newState = 'pendiente';
+            }
+
+            console.log(`Item Type: ${itemType}, Item Name: ${itemName}, New State: ${newState}`);
+
+            saveStatusItem(itemType, dayIndex, itemName, newState);
+            updatePanels(dayIndex, exercisesData, foodData, renderExerciseItem, renderFoodItem);
+        }
+    });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const days = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
     
-    // Obtener el índice del día guardado o el día actual
     let savedDayIndex = getSavedDayIndex();
     if (savedDayIndex !== null) {
         savedDayIndex = parseInt(savedDayIndex);
@@ -10,69 +36,40 @@ document.addEventListener("DOMContentLoaded", function () {
         savedDayIndex = today >= 0 && today < 7 ? today : 0;
     }
 
-    // Guardar la fecha actual para reiniciar automáticamente en un nuevo día
     const lastVisitDate = getLastVisitDate();
     const todayDate = new Date().toLocaleDateString();
 
     if (lastVisitDate !== todayDate) {
-        clearLocalStorage(); // Reiniciar los datos si es un nuevo día
+        clearLocalStorage();
         setLastVisitDate(todayDate);
     }
 
-    // Crear las tabs para los días de la semana
-    createDayTabs(days, savedDayIndex, function(dayIndex) {
-        setSavedDayIndex(dayIndex);
-        updatePanels(dayIndex, exercisesData, foodData);
-        attachStatusButtonHandlers(dayIndex);
-    });
+    const fetchData = async () => {
+        const exercisesResponse = await fetch('ejercicios.json');
+        const exercises = await exercisesResponse.json();
+        exercisesData = exercises.rutina;
 
-    // Cargar los datos de ejercicios y comidas
-    let exercisesData, foodData;
+        const foodResponse = await fetch('comida.json');
+        const food = await foodResponse.json();
+        foodData = food.comidas;
 
-    fetch('ejercicios.json')
-        .then(response => response.json())
-        .then(data => {
-            exercisesData = data.rutina;
-            updatePanels(savedDayIndex, exercisesData, foodData);
-            attachStatusButtonHandlers(savedDayIndex);
-        });
+        const updateAndAttachHandlers = (dayIndex) => {
+            setSavedDayIndex(dayIndex);
+            updatePanels(dayIndex, exercisesData, foodData, renderExerciseItem, renderFoodItem);
+            attachStatusButtonHandlers(dayIndex);
+        };
 
-    fetch('comida.json')
-        .then(response => response.json())
-        .then(data => {
-            foodData = data.comidas;
-            updatePanels(savedDayIndex, exercisesData, foodData);
-            attachStatusButtonHandlers(savedDayIndex);
-        });
+        createDayTabs(days, savedDayIndex, updateAndAttachHandlers);
 
-    // Botón de restaurar día
+        updateAndAttachHandlers(savedDayIndex);
+    };
+
+    fetchData();
+
     document.getElementById('restoreDayButton').addEventListener('click', function () {
         const dayIndex = getSavedDayIndex();
         clearStatusItems(dayIndex);
-        updatePanels(dayIndex, exercisesData, foodData);
+        updatePanels(dayIndex, exercisesData, foodData, renderExerciseItem, renderFoodItem);
         attachStatusButtonHandlers(dayIndex);
     });
 });
-
-function updatePanels(dayIndex, exercisesData, foodData) {
-    if (exercisesData && foodData) {
-        const exercisePanel = document.getElementById('exercisePanel');
-        const foodPanel = document.getElementById('foodPanel');
-
-        // Limpiar los paneles
-        exercisePanel.innerHTML = '';
-        foodPanel.innerHTML = '';
-
-        // Renderizar los ejercicios del día
-        exercisesData[dayIndex].ejercicios.forEach((exercise, index) => {
-            exercisePanel.innerHTML += renderExerciseItem(`Ejercicio ${index + 1}`, exercise, getStatusItems(dayIndex, 'exercise'));
-        });
-
-        // Renderizar las comidas del día
-        Object.keys(foodData[dayIndex]).forEach(mealKey => {
-            if (mealKey !== 'dia') {
-                foodPanel.innerHTML += renderFoodItem(mealKey.charAt(0).toUpperCase() + mealKey.slice(1), foodData[dayIndex][mealKey], getStatusItems(dayIndex, 'food'));
-            }
-        });
-    }
-}
