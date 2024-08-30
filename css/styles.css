@@ -74,3 +74,69 @@ body {
     border-radius: 50%;
     margin: 10px;
 }
+
+/* Estilos de animación para el objetivo */
+.objective-animated {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    display: inline-block;
+}
+
+/* Animación personalizada usando animate.css */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        color: #333;
+    }
+    50% {
+        transform: scale(1.2);
+        color: #f39c12; /* Cambia el color para hacerla más llamativa */
+    }
+    100% {
+        transform: scale(1);
+        color: #333;
+    }
+}
+
+.pulse-animation {
+    animation-name: pulse;
+    animation-timing-function: ease-in-out;
+}
+
+/* Estilos de resumen para móvil */
+.dashboard {
+    font-size: 0.9rem;
+    padding: 1rem;
+}
+
+.objective-animated {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f39c12;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+/* Mejora de las animaciones */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        color: #333;
+    }
+    50% {
+        transform: scale(1.2);
+        color: #f39c12;
+    }
+    100% {
+        transform: scale(1);
+        color: #333;
+    }
+}
+
+.pulse-animation {
+    animation-name: pulse;
+    animation-timing-function: ease-in-out;
+}

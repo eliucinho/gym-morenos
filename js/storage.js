@@ -15,12 +15,14 @@ function getStatusItem(itemType, dayIndex, itemName) {
 // Obtiene todos los estados de ítems (ejercicio o comida) para un día específico
 function getStatusItems(itemType, dayIndex) {
     const statusItems = {};
-    // Recorre todas las claves en localStorage
     for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
         if (key.startsWith(`${dayIndex}-${itemType}-`)) {
             const itemName = key.split(`${dayIndex}-${itemType}-`)[1];
             statusItems[itemName] = localStorage.getItem(key);
+
+            // Depuración para verificar qué estados se están cargando
+            console.log(`Cargando estado de ${itemType} para ${itemName} en día ${dayIndex}: ${statusItems[itemName]}`);
         }
     }
     return statusItems;
