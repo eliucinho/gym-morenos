@@ -2,34 +2,52 @@
 
 // Guarda el estado de un ítem (ejercicio o comida) en el localStorage
 function saveStatusItem(itemType, dayIndex, itemName, state) {
-    const key = itemType === 'exercise' ? `statusExercises-${dayIndex}` : `statusFood-${dayIndex}`;
-    let statusItems = JSON.parse(localStorage.getItem(key)) || {};
-    
-    // Usar el nombre del ítem como clave dentro del almacenamiento del día específico
-    statusItems[itemName] = state;
-    localStorage.setItem(key, JSON.stringify(statusItems));
+    const key = `${dayIndex}-${itemType}-${itemName}`; // Clave única por día, tipo y nombre de ítem
+    localStorage.setItem(key, state);
 }
 
-// Obtiene todos los ítems (ejercicio o comida) guardados para un día específico desde el localStorage
+// Obtiene el estado de un ítem específico desde el localStorage
+function getStatusItem(itemType, dayIndex, itemName) {
+    const key = `${dayIndex}-${itemType}-${itemName}`; // Clave única por día, tipo y nombre de ítem
+    return localStorage.getItem(key) || 'pendiente'; // Retorna 'pendiente' si no existe
+}
+
+// Obtiene todos los estados de ítems (ejercicio o comida) para un día específico
 function getStatusItems(itemType, dayIndex) {
-    const key = itemType === 'exercise' ? `statusExercises-${dayIndex}` : `statusFood-${dayIndex}`;
-    return JSON.parse(localStorage.getItem(key)) || {};
+    const statusItems = {};
+    // Recorre todas las claves en localStorage
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key.startsWith(`${dayIndex}-${itemType}-`)) {
+            const itemName = key.split(`${dayIndex}-${itemType}-`)[1];
+            statusItems[itemName] = localStorage.getItem(key);
+        }
+    }
+    return statusItems;
 }
 
 // Limpia el estado de todos los ítems (ejercicio y comida) para un día específico en el localStorage
 function clearStatusItems(dayIndex) {
-    localStorage.removeItem(`statusExercises-${dayIndex}`);
-    localStorage.removeItem(`statusFood-${dayIndex}`);
+    const keysToRemove = [];
+    // Recorre todas las claves de localStorage
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key.startsWith(`${dayIndex}-`)) {
+            keysToRemove.push(key);
+        }
+    }
+    // Elimina las claves correspondientes
+    keysToRemove.forEach(key => localStorage.removeItem(key));
 }
 
 // Obtiene el índice del día seleccionado previamente desde el localStorage
 function getSavedDayIndex() {
-    return localStorage.getItem('selectedDayIndex');
+    return parseInt(localStorage.getItem('savedDayIndex'), 10);
 }
 
 // Guarda el índice del día seleccionado en el localStorage
 function setSavedDayIndex(dayIndex) {
-    localStorage.setItem('selectedDayIndex', dayIndex);
+    localStorage.setItem('savedDayIndex', dayIndex);
 }
 
 // Limpia todo el localStorage
@@ -46,4 +64,3 @@ function setLastVisitDate(date) {
 function getLastVisitDate() {
     return localStorage.getItem('lastVisitDate');
 }
-

@@ -25,7 +25,7 @@ function createMediaElement(item) {
 }
 
 // Función general para renderizar elementos
-function renderItem(label, item, statusItems, getSummaryHtml, getDetailsHtml, titleClass = '') {
+function renderItem(label, item, dayIndex, statusItems, getSummaryHtml, getDetailsHtml, titleClass = '') {
     const state = statusItems[item.nombre] || 'pendiente';
     const { buttonClass, buttonIcon } = getButtonStateAndClass(state);
     const mediaElement = createMediaElement(item);
@@ -39,7 +39,7 @@ function renderItem(label, item, statusItems, getSummaryHtml, getDetailsHtml, ti
                     <strong>${label ? `${label}: ` : ''}${item.nombre}</strong><br>
                     ${summaryHtml}
                 </div>
-                <button class="btn status-button ${buttonClass} rounded-circle ml-2" data-type="${label.toLowerCase()}" data-name="${item.nombre}" data-state="${state}">
+                <button class="btn status-button ${buttonClass} rounded-circle ml-2" data-type="${label.toLowerCase()}" data-name="${item.nombre}" data-state="${state}" data-day="${dayIndex}">
                     ${buttonIcon}
                 </button>
             </div>
@@ -60,7 +60,7 @@ document.addEventListener('click', function(event) {
         const itemType = button.getAttribute('data-type');
         const itemName = button.getAttribute('data-name');
         const currentState = button.getAttribute('data-state');
-        const dayIndex = getSavedDayIndex();
+        const dayIndex = button.getAttribute('data-day'); // Obtén el día específico del ítem
 
         // Lógica de cambio de estado: pendiente -> hecho -> omitido -> pendiente
         let newState;
@@ -78,7 +78,7 @@ document.addEventListener('click', function(event) {
         button.className = `btn status-button ${buttonClass} rounded-circle`;
         button.innerHTML = buttonIcon;
 
-        // Guarda el estado actualizado en localStorage
+        // Guarda el estado actualizado en localStorage con la clave única
         saveStatusItem(itemType, dayIndex, itemName, newState);
     }
 });

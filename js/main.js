@@ -53,6 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Actualiza los paneles para el día seleccionado
         updatePanels(savedDayIndex, exercisesData, foodData, renderExerciseItem, renderFoodItem);
+
+        // Configura la funcionalidad de alternancia de pestañas
+        setupTabSwitching();
     };
 
     fetchData();
@@ -64,3 +67,25 @@ document.addEventListener("DOMContentLoaded", function () {
         attachStatusButtonHandlers(dayIndex, exercisesData, foodData);
     });
 });
+
+// Configura la funcionalidad de alternancia de pestañas
+function setupTabSwitching() {
+    const exerciseTabButton = document.getElementById('exerciseTabButton');
+    const foodTabButton = document.getElementById('foodTabButton');
+    const exercisePanelContainer = document.getElementById('exercisePanelContainer');
+    const foodPanelContainer = document.getElementById('foodPanelContainer');
+
+    exerciseTabButton.addEventListener('click', function () {
+        exercisePanelContainer.classList.remove('d-none');
+        foodPanelContainer.classList.add('d-none');
+        exerciseTabButton.classList.add('active');
+        foodTabButton.classList.remove('active');
+    });
+
+    foodTabButton.addEventListener('click', function () {
+        foodPanelContainer.classList.remove('d-none');
+        exercisePanelContainer.classList.add('d-none');
+        foodTabButton.classList.add('active');
+        exerciseTabButton.classList.remove('active');
+    });
+}

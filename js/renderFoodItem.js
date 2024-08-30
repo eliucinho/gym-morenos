@@ -1,14 +1,12 @@
 // js/renderFoodItem.js
 
-function renderFoodItem(label, item, statusItems) {
-    const dayIndex = getSavedDayIndex();
-    const savedStatusItems = getStatusItems('food', dayIndex);
-    const state = savedStatusItems[item.nombre] || statusItems[item.nombre] || 'pendiente';
+function renderFoodItem(label, item, dayIndex, statusItems) {
+    const state = getStatusItem('food', dayIndex, item.nombre);
 
     // Aplicar clase 'tachado' si el estado es 'hecho'
     const titleClass = state === 'hecho' ? 'tachado' : '';
 
-    return renderItem(label, item, { [item.nombre]: state }, getFoodSummaryHtml, getFoodDetailsHtml, titleClass);
+    return renderItem(label, item, dayIndex, { [item.nombre]: state }, getFoodSummaryHtml, getFoodDetailsHtml, titleClass);
 }
 
 function getFoodSummaryHtml(item) {

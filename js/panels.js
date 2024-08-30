@@ -1,4 +1,4 @@
-//js/panels.js
+// js/panels.js
 function updatePanels(dayIndex, exercisesData, foodData, renderExerciseItem, renderFoodItem) {
     const exercisePanel = document.getElementById('exercisePanel');
     const foodPanel = document.getElementById('foodPanel');
@@ -22,16 +22,16 @@ function updatePanels(dayIndex, exercisesData, foodData, renderExerciseItem, ren
     ];
 
     exercisePanel.innerHTML = sortedExercises.map((exercise, i) =>
-        renderExerciseItem(`Ejercicio ${i + 1}`, exercise, statusExercises)
+        renderExerciseItem(`Ejercicio ${i + 1}`, exercise, dayIndex, statusExercises)
     ).join('');
 
     const dayFood = foodData[dayIndex] || {};
     foodPanel.innerHTML = `
-        ${renderFoodItem("Desayuno", dayFood.desayuno, statusFood)}
-        ${renderFoodItem("Media Mañana", dayFood.mediaManana, statusFood)}
-        ${renderFoodItem("Almuerzo", dayFood.almuerzo, statusFood)}
-        ${renderFoodItem("Merienda", dayFood.merienda, statusFood)}
-        ${renderFoodItem("Cena", dayFood.cena, statusFood)}
-        ${renderFoodItem("Antes de Dormir", dayFood.antesDeDormir, statusFood)}
+        ${renderFoodItem("Desayuno", dayFood.desayuno, dayIndex, statusFood)}
+        ${renderFoodItem("Media Mañana", dayFood.mediaManana, dayIndex, statusFood)}
+        ${renderFoodItem("Almuerzo", dayFood.almuerzo, dayIndex, statusFood)}
+        ${renderFoodItem("Merienda", dayFood.merienda, dayIndex, statusFood)}
+        ${renderFoodItem("Cena", dayFood.cena, dayIndex, statusFood)}
+        ${renderFoodItem("Antes de Dormir", dayFood.antesDeDormir, dayIndex, statusFood)}
     `;
 }

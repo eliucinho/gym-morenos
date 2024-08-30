@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plan de Ejercicios y Alimentación</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body class="bg-light">
@@ -22,14 +19,20 @@
             <ul class="nav nav-pills flex-row mx-auto" id="dayTabs" role="tablist"></ul>
         </div>
 
+        <!-- Botones para alternar entre paneles -->
+        <div class="text-center mt-4">
+            <button id="exerciseTabButton" class="btn btn-outline-primary btn-lg active">Rutina de Ejercicios</button>
+            <button id="foodTabButton" class="btn btn-outline-primary btn-lg">Plan de Comidas</button>
+        </div>
+
         <!-- Panel de Ejercicios -->
-        <div class="mt-4 px-3">
+        <div id="exercisePanelContainer" class="mt-4 px-3">
             <h2 class="text-center text-primary">Rutina de Ejercicios</h2>
             <div id="exercisePanel" class="details"></div>
         </div>
 
         <!-- Panel de Comidas -->
-        <div class="mt-4 px-3">
+        <div id="foodPanelContainer" class="mt-4 px-3 d-none">
             <h2 class="text-center text-primary">Plan de Comidas</h2>
             <div id="foodPanel" class="details"></div>
         </div>
