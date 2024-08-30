@@ -6,29 +6,37 @@
     <title>Plan de Ejercicios y Alimentación</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+    <link href="css/styles.css" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <h1 class="text-center my-4">Plan de Ejercicios y Alimentación</h1>
+<body class="bg-light">
+    <div class="container-fluid p-0">
+        <div class="header bg-primary text-white text-center py-3">
+            <h1>Plan de Ejercicios y Alimentación</h1>
+        </div>
 
         <!-- Tabs para los días de la semana -->
-        <ul class="nav nav-tabs justify-content-center" id="dayTabs" role="tablist"></ul>
+        <div class="d-flex overflow-auto py-2 bg-secondary" id="dayTabsContainer">
+            <ul class="nav nav-pills flex-row mx-auto" id="dayTabs" role="tablist"></ul>
+        </div>
 
         <!-- Panel de Ejercicios -->
-        <div class="mt-4">
-            <h2 class="text-center">Rutina de Ejercicios</h2>
+        <div class="mt-4 px-3">
+            <h2 class="text-center text-primary">Rutina de Ejercicios</h2>
             <div id="exercisePanel" class="details"></div>
         </div>
 
         <!-- Panel de Comidas -->
-        <div class="mt-4">
-            <h2 class="text-center">Plan de Comidas</h2>
+        <div class="mt-4 px-3">
+            <h2 class="text-center text-primary">Plan de Comidas</h2>
             <div id="foodPanel" class="details"></div>
         </div>
 
         <!-- Botón de restaurar -->
         <div class="text-center mt-4">
-            <button id="restoreDayButton" class="btn btn-warning">Restaurar Día</button>
+            <button id="restoreDayButton" class="btn btn-outline-primary btn-lg">Restaurar Día</button>
         </div>
     </div>
 
@@ -38,6 +46,7 @@
     <script src="js/storage.js"></script>
     <script src="js/dayTabs.js"></script>
     <script src="js/panels.js"></script>
+    <script src="js/common.js"></script>
     <script src="js/renderExerciseItem.js"></script>
     <script src="js/renderFoodItem.js"></script>
     <script src="js/main.js"></script>

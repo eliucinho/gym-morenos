@@ -1,7 +1,11 @@
+// js/storage.js
+
 // Guarda el estado de un ítem (ejercicio o comida) en el localStorage
 function saveStatusItem(itemType, dayIndex, itemName, state) {
     const key = itemType === 'exercise' ? `statusExercises-${dayIndex}` : `statusFood-${dayIndex}`;
     let statusItems = JSON.parse(localStorage.getItem(key)) || {};
+    
+    // Usar el nombre del ítem como clave dentro del almacenamiento del día específico
     statusItems[itemName] = state;
     localStorage.setItem(key, JSON.stringify(statusItems));
 }
@@ -42,3 +46,4 @@ function setLastVisitDate(date) {
 function getLastVisitDate() {
     return localStorage.getItem('lastVisitDate');
 }
+
