@@ -1,5 +1,5 @@
 // js/panels.js
-function updatePanels(dayIndex, exercisesData, foodData, renderExerciseItem, renderFoodItem) {
+function updatePanels(dayIndex, exercisesData, foodData) {
     const exercisePanel = document.getElementById('exercisePanel');
     const foodPanel = document.getElementById('foodPanel');
 

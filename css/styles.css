@@ -1,12 +1,27 @@
-/* estilos generales */
+/* css/styles.css */
+/* Estilos generales */
 body {
-    background-color: #f8f9fa; /* color de fondo claro */
+    background-color: #f8f9fa;
+    color: #343a40;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
 }
 
+/* Encabezado */
 .header {
-    background-color: #007bff; /* azul para encabezado */
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
+.header h2 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+/* Detalles */
 .details {
     padding: 15px;
     border-radius: 10px;
@@ -14,129 +29,175 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Botones principales */
 .btn-outline-primary {
     border-color: #007bff;
     color: #007bff;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+.btn-outline-primary.active,
 .btn-outline-primary:hover {
     background-color: #007bff;
     color: white;
 }
 
-.nav-pills .nav-link {
-    color: white;
-    background-color: #6c757d;
-    border-radius: 20px;
-    margin: 0 5px;
-}
-
-.nav-pills .nav-link.active {
-    background-color: #007bff;
-}
-/* estilos para los botones de estado */
+/* Botones de estado */
 .btn-pendiente, .btn-hecho, .btn-omitido {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    border-radius: 50%;
+    transition: transform 0.2s;
 }
 
 .btn-pendiente {
     background-color: #ffc107;
     color: black;
-    border-radius: 50%; /* Hacer el botón redondeado */
 }
 
 .btn-hecho {
     background-color: #28a745;
     color: white;
-    border-radius: 50%; /* Hacer el botón redondeado */
 }
 
 .btn-omitido {
     background-color: #dc3545;
     color: white;
-    border-radius: 50%; /* Hacer el botón redondeado */
 }
 
-.tachado {
-    text-decoration: line-through;
+.btn-pendiente:hover, .btn-hecho:hover, .btn-omitido:hover {
+    transform: scale(1.1);
 }
 
-/* estilos para la imagen de usuario */
-#userImage {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 10px;
+/* Tabs de navegación */
+.nav-pills .nav-link {
+    color: white;
+    background-color: #6c757d;
+    border-radius: 30px;
+    margin: 0 5px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    white-space: nowrap;
 }
 
-/* Estilos de animación para el objetivo */
+.nav-pills .nav-link.active {
+    background-color: #007bff;
+}
+
+/* Animaciones */
 .objective-animated {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
+    color: #f39c12;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     display: inline-block;
 }
 
-/* Animación personalizada usando animate.css */
 @keyframes pulse {
     0% {
         transform: scale(1);
-        color: #333;
-    }
-    50% {
-        transform: scale(1.2);
-        color: #f39c12; /* Cambia el color para hacerla más llamativa */
-    }
-    100% {
-        transform: scale(1);
-        color: #333;
-    }
-}
-
-.pulse-animation {
-    animation-name: pulse;
-    animation-timing-function: ease-in-out;
-}
-
-/* Estilos de resumen para móvil */
-.dashboard {
-    font-size: 0.9rem;
-    padding: 1rem;
-}
-
-.objective-animated {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #f39c12;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-
-/* Mejora de las animaciones */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        color: #333;
-    }
-    50% {
-        transform: scale(1.2);
         color: #f39c12;
     }
+    50% {
+        transform: scale(1.2);
+        color: #007bff;
+    }
     100% {
         transform: scale(1);
-        color: #333;
+        color: #f39c12;
     }
 }
 
 .pulse-animation {
     animation-name: pulse;
     animation-timing-function: ease-in-out;
+}
+
+/* Contenedor de tabs */
+#dayTabsContainer {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#dayTabs {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+/* Botones alineados horizontalmente */
+#tabButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#tabButtonContainer button {
+    flex: 0 1 auto;
+    min-width: 120px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) { /* Tablets y pantallas pequeñas */
+    .header h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn-outline-primary {
+        width: 100%;
+        margin-bottom: 10px; /* Espacio entre botones cuando están en columna */
+    }
+
+    .objective-animated {
+        font-size: 1.2rem;
+    }
+
+    #tabButtonContainer button {
+        flex: 0 1 auto; /* Los botones tendrán un tamaño flexible basado en el contenido */
+        min-width: 120px; /* Ancho mínimo para cada botón */
+        margin: 0; /* Asegura que no haya margen adicional */
+        white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+    }
+    
+    
+}
+
+@media (max-width: 576px) { /* Smartphones y pantallas muy pequeñas */
+    .header h2 {
+        font-size: 1.2rem;
+    }
+
+    .dashboard {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .btn-pendiente, .btn-hecho, .btn-omitido {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .objective-animated {
+        font-size: 1rem;
+    }
+    #tabButtonContainer button {
+        flex: 0 1 auto; /* Los botones tendrán un tamaño flexible basado en el contenido */
+        min-width: 120px; /* Ancho mínimo para cada botón */
+        margin: 0; /* Asegura que no haya margen adicional */
+        white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+    }
+    
 }

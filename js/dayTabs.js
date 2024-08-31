@@ -1,7 +1,12 @@
 //js/dayTab.js
 function createDayTabs(days, savedDayIndex, onSelectDay) {
     const dayTabs = document.getElementById('dayTabs');
-    dayTabs.innerHTML = ''; // Limpia las pestañas anteriores
+
+    // Verifica si ya hay pestañas creadas
+    if (dayTabs.children.length > 0) {
+        console.log("Las pestañas ya están creadas, no se vuelven a crear.");
+        return; // Si ya hay pestañas, salir de la función
+    }
 
     days.forEach((day, index) => {
         const isActive = index === savedDayIndex ? 'active' : '';

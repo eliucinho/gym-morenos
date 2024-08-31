@@ -53,67 +53,66 @@ function renderItem(label, item, dayIndex, statusItems, getSummaryHtml, getDetai
     `;
 }
 
-// Manejador de eventos para los botones de estado
-document.addEventListener('click', function(event) {
-    if (event.target.closest('.status-button')) {
-        const button = event.target.closest('.status-button');
-        const itemType = button.getAttribute('data-type');
-        const itemName = button.getAttribute('data-name');
-        const currentState = button.getAttribute('data-state');
-        const dayIndex = button.getAttribute('data-day'); // Obtén el día específico del ítem
+// js/common.js (o donde corresponda)
 
-        // Lógica de cambio de estado: pendiente -> hecho -> omitido -> pendiente
-        let newState;
-        if (currentState === 'pendiente') {
-            newState = 'hecho';
-        } else if (currentState === 'hecho') {
-            newState = 'omitido';
-        } else {
-            newState = 'pendiente';
-        }
+function attachStatusButtonHandlers(dayIndex, exercisesData, foodData) {
+    // Selecciona todos los botones de estado
+    const statusButtons = document.querySelectorAll('.status-button');
 
-        // Actualiza el estado del botón
-        button.setAttribute('data-state', newState);
-        const { buttonClass, buttonIcon } = getButtonStateAndClass(newState);
-        button.className = `btn status-button ${buttonClass} rounded-circle`;
-        button.innerHTML = buttonIcon;
+    statusButtons.forEach((button) => {
+        button.addEventListener('click', function () {
+            const itemType = button.getAttribute('data-type');
+            const itemName = button.getAttribute('data-name');
+            const currentState = button.getAttribute('data-state');
 
-        // Guarda el estado actualizado en localStorage con la clave única
-        saveStatusItem(itemType, dayIndex, itemName, newState);
+            // Determinar el nuevo estado del botón
+            let newState;
+            if (currentState === 'pendiente') {
+                newState = 'hecho';
+            } else if (currentState === 'hecho') {
+                newState = 'omitido';
+            } else {
+                newState = 'pendiente';
+            }
+
+            // Actualiza el estado visual del botón
+            updateButtonState(button, newState);
+
+            // Guarda el estado actualizado
+            saveStatusItem(itemType, dayIndex, itemName, newState);
+
+            // Registro en consola para depuración
+            console.log(`Guardando estado: ${newState} para ${itemType} ${itemName} en día ${dayIndex}`);
+
+            // Actualiza el dashboard con los datos más recientes
+            updateDashboard(dayIndex, exercisesData, foodData);
+        });
+    });
+}
+
+// Función para actualizar el estado visual del botón
+function updateButtonState(button, newState) {
+    const { buttonClass, buttonIcon } = getButtonStateAndClass(newState);
+    button.setAttribute('data-state', newState);
+    button.className = `btn status-button ${buttonClass} rounded-circle`;
+    button.innerHTML = buttonIcon;
+}
+
+function getButtonStateAndClass(state) {
+    let buttonClass, buttonIcon;
+    switch (state) {
+        case 'pendiente':
+            buttonClass = 'btn-warning';
+            buttonIcon = '<i class="fas fa-hourglass-start"></i>';
+            break;
+        case 'hecho':
+            buttonClass = 'btn-success';
+            buttonIcon = '<i class="fas fa-check"></i>';
+            break;
+        case 'omitido':
+            buttonClass = 'btn-danger';
+            buttonIcon = '<i class="fas fa-times"></i>';
+            break;
     }
-});
-
-// Manejador de eventos para los botones de estado
-document.addEventListener('click', function(event) {
-    if (event.target.closest('.status-button')) {
-        const button = event.target.closest('.status-button');
-        const itemType = button.getAttribute('data-type');
-        const itemName = button.getAttribute('data-name');
-        const currentState = button.getAttribute('data-state');
-        const dayIndex = button.getAttribute('data-day'); // Obtén el día específico del ítem
-
-        // Lógica de cambio de estado: pendiente -> hecho -> omitido -> pendiente
-        let newState;
-        if (currentState === 'pendiente') {
-            newState = 'hecho';
-        } else if (currentState === 'hecho') {
-            newState = 'omitido';
-        } else {
-            newState = 'pendiente';
-        }
-
-        // Actualiza el estado del botón
-        button.setAttribute('data-state', newState);
-        const { buttonClass, buttonIcon } = getButtonStateAndClass(newState);
-        button.className = `btn status-button ${buttonClass} rounded-circle`;
-        button.innerHTML = buttonIcon;
-
-        // Guarda el estado actualizado en localStorage con la clave única
-        saveStatusItem(itemType, dayIndex, itemName, newState);
-
-        // Actualiza el dashboard con los datos más recientes
-        const exercisesData = JSON.parse(localStorage.getItem('exercisesData')) || [];
-        const foodData = JSON.parse(localStorage.getItem('foodData')) || [];
-        updateDashboard(dayIndex, exercisesData, foodData);
-    }
-});
+    return { buttonClass, buttonIcon };
+}
