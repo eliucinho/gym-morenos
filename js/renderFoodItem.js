@@ -1,12 +1,12 @@
 // js/renderFoodItem.js
 
-function renderFoodItem(label, item, dayIndex, statusItems) {
-    const state = getStatusItem('food', dayIndex, item.nombre);
+function renderFoodItem(label, tittle, item, dayIndex, statusItems) {
+    const state = getStatusItem(label, dayIndex, item.nombre);
 
     // Aplicar clase 'tachado' si el estado es 'hecho'
     const titleClass = state === 'hecho' ? 'tachado' : '';
 
-    return renderItem(label, item, dayIndex, { [item.nombre]: state }, getFoodSummaryHtml, getFoodDetailsHtml, titleClass);
+    return renderItem(label, item, dayIndex, state, getFoodSummaryHtml, getFoodDetailsHtml, titleClass);
 }
 
 function getFoodSummaryHtml(item) {

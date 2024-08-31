@@ -8,9 +8,6 @@ function updatePanels(dayIndex, exercisesData, foodData) {
         return;
     }
 
-    const statusExercises = getStatusItems('exercise', dayIndex) || {};
-    const statusFood = getStatusItems('food', dayIndex) || {};
-
     const dayExercises = exercisesData[dayIndex]?.ejercicios || [];
 
     // Ordenar los ejercicios según su tipo
@@ -22,16 +19,17 @@ function updatePanels(dayIndex, exercisesData, foodData) {
     ];
 
     exercisePanel.innerHTML = sortedExercises.map((exercise, i) =>
-        renderExerciseItem(`Ejercicio ${i + 1}`, exercise, dayIndex, statusExercises)
+        renderExerciseItem(`Ejercicio ${i + 1}`, exercise, dayIndex)
     ).join('');
 
     const dayFood = foodData[dayIndex] || {};
+
     foodPanel.innerHTML = `
-        ${renderFoodItem("Desayuno", dayFood.desayuno, dayIndex, statusFood)}
-        ${renderFoodItem("Media Mañana", dayFood.mediaManana, dayIndex, statusFood)}
-        ${renderFoodItem("Almuerzo", dayFood.almuerzo, dayIndex, statusFood)}
-        ${renderFoodItem("Merienda", dayFood.merienda, dayIndex, statusFood)}
-        ${renderFoodItem("Cena", dayFood.cena, dayIndex, statusFood)}
-        ${renderFoodItem("Antes de Dormir", dayFood.antesDeDormir, dayIndex, statusFood)}
+        ${renderFoodItem("Comida 1","Desayuno", dayFood.desayuno, dayIndex)}
+        ${renderFoodItem("Comida 2","Media Mañana", dayFood.mediaManana, dayIndex)}
+        ${renderFoodItem("Comida 3","Almuerzo", dayFood.almuerzo, dayIndex)}
+        ${renderFoodItem("Comida 4","Merienda", dayFood.merienda, dayIndex)}
+        ${renderFoodItem("Comida 5","Cena", dayFood.cena, dayIndex)}
+        ${renderFoodItem("Comida 6","Antes de Dormir", dayFood.antesDeDormir, dayIndex)}
     `;
 }

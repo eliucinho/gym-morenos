@@ -1,12 +1,5 @@
 // js/common.js
 
-// Función para obtener el estado del botón y la clase CSS correspondiente
-function getButtonStateAndClass(state) {
-    const buttonClass = state === 'hecho' ? 'btn-hecho' : state === 'omitido' ? 'btn-omitido' : 'btn-pendiente';
-    const buttonIcon = state === 'omitido' ? `<i class="fas fa-times"></i>` : `<i class="fas fa-check"></i>`;
-    return { buttonClass, buttonIcon };
-}
-
 // Función para crear un elemento de medios (video o imagen)
 function createMediaElement(item) {
     if (item.video && item.video !== "") {
@@ -25,8 +18,7 @@ function createMediaElement(item) {
 }
 
 // Función general para renderizar elementos
-function renderItem(label, item, dayIndex, statusItems, getSummaryHtml, getDetailsHtml, titleClass = '') {
-    const state = statusItems[item.nombre] || 'pendiente';
+function renderItem(label, item, dayIndex, state, getSummaryHtml, getDetailsHtml, titleClass = '') {
     const { buttonClass, buttonIcon } = getButtonStateAndClass(state);
     const mediaElement = createMediaElement(item);
     const summaryHtml = getSummaryHtml(item);
@@ -52,52 +44,6 @@ function renderItem(label, item, dayIndex, statusItems, getSummaryHtml, getDetai
         </div>
     `;
 }
-
-// js/common.js (o donde corresponda)
-
-function attachStatusButtonHandlers(dayIndex, exercisesData, foodData) {
-    // Selecciona todos los botones de estado
-    const statusButtons = document.querySelectorAll('.status-button');
-
-    statusButtons.forEach((button) => {
-        button.addEventListener('click', function () {
-            const itemType = button.getAttribute('data-type');
-            const itemName = button.getAttribute('data-name');
-            const currentState = button.getAttribute('data-state');
-
-            // Determinar el nuevo estado del botón
-            let newState;
-            if (currentState === 'pendiente') {
-                newState = 'hecho';
-            } else if (currentState === 'hecho') {
-                newState = 'omitido';
-            } else {
-                newState = 'pendiente';
-            }
-
-            // Actualiza el estado visual del botón
-            updateButtonState(button, newState);
-
-            // Guarda el estado actualizado
-            saveStatusItem(itemType, dayIndex, itemName, newState);
-
-            // Registro en consola para depuración
-            console.log(`Guardando estado: ${newState} para ${itemType} ${itemName} en día ${dayIndex}`);
-
-            // Actualiza el dashboard con los datos más recientes
-            updateDashboard(dayIndex, exercisesData, foodData);
-        });
-    });
-}
-
-// Función para actualizar el estado visual del botón
-function updateButtonState(button, newState) {
-    const { buttonClass, buttonIcon } = getButtonStateAndClass(newState);
-    button.setAttribute('data-state', newState);
-    button.className = `btn status-button ${buttonClass} rounded-circle`;
-    button.innerHTML = buttonIcon;
-}
-
 function getButtonStateAndClass(state) {
     let buttonClass, buttonIcon;
     switch (state) {

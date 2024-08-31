@@ -15,13 +15,13 @@
 <body class="bg-light">
     <div class="container-fluid p-0">
         <!-- Rediseño del encabezado para ser más pequeño y minimalista -->
-        <div class="header bg-primary text-white text-center py-2 position-relative">
+        <div class="header text-center py-2 position-relative">
             <h2 class="position-relative m-0" style="z-index: 1; font-size: 1.8rem;">Plan de Ejercicios y Alimentación</h2>
         </div>
         <div class="dashboard bg-light text-dark py-3 px-2 rounded shadow-sm mx-2 mb-3" id="todayDashboard">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="w-75 pr-3"> <!-- Añadir margen interno derecho para mejor distribución -->
-                    <h5 class="mb-1" id="activityTitle">Actividad de Hoy</h5>
+                    <h5 class="mb-1" id="activityTitle">Actividad de ahora</h5>
                     <p class="small mb-0 text-muted" id="currentActivity">🏃‍♂️ Calculando actividad...</p>
                     <div class="d-flex align-items-center mt-2">
                         <i class="fas fa-dumbbell text-primary mr-2"></i>
@@ -34,6 +34,7 @@
                     <div id="additionalInfo" class="mt-2 d-flex flex-column"></div>
                 </div>
                 <div class="w-25 text-center">
+                    <h5 class="mb-1" id="activityTitle">Objetivo:</h5>
                     <div id="objectiveAnimationContainer">
                         <p id="objectiveText" class="objective-animated pulse-animation mb-0">🎯 Calculando objetivo...</p>
                     </div>
@@ -42,7 +43,7 @@
         </div>
         <!-- Tabs para los días de la semana -->
         <!-- Ajusta la barra de tabs para mejorar el deslizamiento en dispositivos móviles -->
-        <div class="d-flex overflow-auto py-2 bg-secondary" id="dayTabsContainer" style="white-space: nowrap;">
+        <div class="d-flex overflow-auto py-2" id="dayTabsContainer" style="white-space: nowrap;">
             <ul class="nav nav-pills flex-nowrap mx-auto" id="dayTabs" role="tablist"></ul>
         </div>
 
@@ -64,10 +65,6 @@
             <div id="foodPanel" class="details"></div>
         </div>
 
-        <!-- Botón de restaurar -->
-        <div class="text-center mt-4">
-            <button id="restoreDayButton" class="btn btn-outline-primary btn-lg">Restaurar Día</button>
-        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

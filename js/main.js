@@ -17,19 +17,20 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Actualiza el dashboard para el día seleccionado
     updateDashboard(savedDayIndex, exercisesData, foodData);
 
+    console.log("se volvio a crear la tab");
     // Crea las pestañas y establece el manejador de selección
     createDayTabs(days, savedDayIndex, (dayIndex) => {
         setSavedDayIndex(dayIndex);
+        console.log("Update panels: dayIndex:", dayIndex);
         updatePanels(dayIndex, exercisesData, foodData); // Actualiza paneles al cambiar de día
-        attachStatusButtonHandlers(dayIndex, exercisesData, foodData); 
 
-        console.log("Cambiando a pestaña del día:", dayIndex);
+        console.log("Cambiando a pestaña del día: dayIndex: ", dayIndex);
         updateDashboard(dayIndex, exercisesData, foodData);
     });
 
     // Actualiza los paneles iniciales y configura los botones de estado
+    console.log("Update main savedDayIndex:", savedDayIndex);
     updatePanels(savedDayIndex, exercisesData, foodData);
-    attachStatusButtonHandlers(savedDayIndex, exercisesData, foodData);
 
     // Configura la funcionalidad de alternancia de pestañas
     setupTabSwitching();

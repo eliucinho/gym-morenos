@@ -3,13 +3,19 @@
 // Guarda el estado de un ítem (ejercicio o comida) en el localStorage
 function saveStatusItem(itemType, dayIndex, itemName, state) {
     const key = `${dayIndex}-${itemType}-${itemName}`; // Clave única por día, tipo y nombre de ítem
+    console.info(`saveStatusItem key: ${key} current value: ${getStatusItem(itemType, dayIndex, itemName)} new value: ${state}`);
     localStorage.setItem(key, state);
 }
 
 // Obtiene el estado de un ítem específico desde el localStorage
 function getStatusItem(itemType, dayIndex, itemName) {
     const key = `${dayIndex}-${itemType}-${itemName}`; // Clave única por día, tipo y nombre de ítem
-    return localStorage.getItem(key) || 'pendiente'; // Retorna 'pendiente' si no existe
+    console.info(`getStatusItem key: ${key} value: ${localStorage.getItem(key)}`);
+    if(localStorage.getItem(key)=== null ){
+        localStorage.setItem(key, 'pendiente');
+        return 'pendiente';
+    }
+    return localStorage.getItem(key);
 }
 
 // Obtiene todos los estados de ítems (ejercicio o comida) para un día específico
