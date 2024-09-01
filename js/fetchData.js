@@ -12,8 +12,8 @@ async function fetchData() {
 
         // Obtener el día actual para generar los IDs
         const dayIndex = initializeDayIndex();
-        assignUniqueIds(exercisesData, 'Exercise', dayIndex);
-        assignUniqueIds(foodData, 'Food', dayIndex);
+        assignUniqueIdsExersise(exercisesData, 'exercise', dayIndex);
+        assignUniqueIds(foodData, 'food', dayIndex);
 
         // Guarda los datos en localStorage
         saveExerciseListData(exercisesData);
@@ -27,12 +27,32 @@ async function fetchData() {
 }
 
 // Función para asignar IDs únicos a cada ítem
+function assignUniqueIdsExersise(items, type, dayIndex) {
+    items.forEach((item, index) => {
+        item.ejercicios.forEach((ejercicio, i) => {
+            if (ejercicio) {
+                // Asigna un ID único basado en el día, tipo y el índice del ítem
+                ejercicio.id = `${type}-${dayIndex}-${i + 1}`;
+                console.info(`Asignando ID exercise: ${ejercicio.id} para ${type}`);
+            } else {
+                console.warn(`ejercicio no encontrado para ${type} en índice ${i}`);
+            }
+        });
+    
+    });
+}
 function assignUniqueIds(items, type, dayIndex) {
+
     items.forEach((item, index) => {
         if (item) {
             // Asigna un ID único basado en el día, tipo y el índice del ítem
-            item.id = `${dayIndex}-${type}-${index + 1}`;
-            console.info(`Asignando ID: ${item.id} para ${type}`);
+            item.desayuno.id = `${type}-${dayIndex}-${1}`;
+            item.mediaManana.id = `${type}-${dayIndex}-${2}`;
+            item.almuerzo.id = `${type}-${dayIndex}-${3}`;
+            item.merienda.id = `${type}-${dayIndex}-${4}`;
+            item.cena.id = `${type}-${dayIndex}-${5}`;
+            item.antesDeDormir.id = `${type}-${dayIndex}-${6}`;
+            console.info(`Asignando ID food: ${item.id} para ${type}`);
         } else {
             console.warn(`Item no encontrado para ${type} en índice ${index}`);
         }

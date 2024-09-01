@@ -7,17 +7,10 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Carga los datos de ejercicios y comida
     const { exercisesData, foodData } = await fetchData();
 
-    // Asegura que se asignan los IDs únicos a todos los elementos después de cargar los datos
-    assignUniqueIds(exercisesData, 'Exercise', savedDayIndex);
-    assignUniqueIds(foodData, 'Food', savedDayIndex);
-
     if (exercisesData.length === 0 || foodData.length === 0) {
         console.error("No se pudieron cargar los datos.");
         return;
     }
-
-    // Actualiza el dashboard para el día seleccionado
-    updateDashboard(savedDayIndex, exercisesData, foodData);
 
     console.log("se volvió a crear la tab");
     // Crea las pestañas y establece el manejador de selección
@@ -33,6 +26,9 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Actualiza los paneles iniciales y configura los botones de estado
     console.log("Update main savedDayIndex:", savedDayIndex);
     updatePanels(savedDayIndex, exercisesData, foodData);
+
+    // Actualiza el dashboard para el día seleccionado
+    updateDashboard(savedDayIndex, exercisesData, foodData);
 
     // Configura la funcionalidad de alternancia de pestañas
     setupTabSwitching();

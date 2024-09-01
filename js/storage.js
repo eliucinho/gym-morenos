@@ -29,20 +29,17 @@ function getStatusItem(itemId) {
 }
 
 // Obtiene todos los estados de ítems (ejercicio o comida) para un día específico
-function getStatusItems(itemType, dayIndex) {
+/*function getStatusItems(itemType, dayIndex) {
     const statusItems = {};
     for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
-        if (key.startsWith(`${dayIndex}-${itemType}-`)) {
-            const itemId = key.split(`${dayIndex}-${itemType}-`)[1];
-            statusItems[itemId] = localStorage.getItem(key);
-
-            // Depuración para verificar qué estados se están cargando
-            console.log(`Cargando estado de ${itemType} para ${itemId} en día ${dayIndex}: ${statusItems[itemId]}`);
+        if (key.startsWith(`${dayIndex}-${itemType.toLowerCase()}`)) {
+            const itemId = key.split(`${dayIndex}-${itemType.toLowerCase()}-`)[1];
+            statusItems[`exercise-${dayIndex}-${itemId}`] = localStorage.getItem(key);
         }
     }
     return statusItems;
-}
+}}*/
 
 // Limpia el estado de todos los ítems (ejercicio y comida) para un día específico en el localStorage
 function clearStatusItems(dayIndex) {
@@ -82,6 +79,7 @@ function getLastVisitDate() {
 }
 
 function saveExerciseListData(exercisesData) {
+    //console.error(`saveExerciseListData exercisesData-${JSON.stringify(exercisesData, null, 2)}`);
     localStorage.setItem('exercisesData', JSON.stringify(exercisesData));
 }
 
@@ -90,7 +88,9 @@ function saveFoodListData(foodData) {
 }
 
 function getExerciseListData() {
-    return JSON.parse(localStorage.getItem('exercisesData')) || [];
+    const exercisesData=JSON.parse(localStorage.getItem('exercisesData')) || [];
+    //
+    return exercisesData;
 }
 
 function getFoodListData() {

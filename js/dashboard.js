@@ -26,21 +26,19 @@ function updateDashboard(dayIndex, exercisesData, foodData) {
         const objectiveText = document.getElementById('objectiveText');
 
         currentActivity.innerText = determineActivityForTime();
-        exerciseSummary.innerText = summarizeExercises(dayIndex);
-        foodSuggestion.innerText = suggestFoodForTime(dayIndex);
+        exerciseSummary.innerText = summarizeExercises(dayIndex); // Asegúrate de pasar exercisesData
+        foodSuggestion.innerText = suggestFoodForTime(dayIndex, foodData);
 
-        const { mainObjective, mainLevel } = analyzeUserProgress();
-        objectiveText.innerText = `🎯 ${mainObjective}`;
+        const { mainObjective, mainLevel } = analyzeUserProgress(dayIndex, exercisesData);
+        objectiveText.innerText = `🎯 ${mainObjective} (${mainLevel})`;
     } catch (error) {
         console.error("Error al actualizar el dashboard:", error);
     }
 }
-
 // Función para resumir los ejercicios
 function summarizeExercises(dayIndex) {
     try {
-        const exercisesData = getExerciseListData();
-
+        const exercisesData=getExerciseListData();
         // Verifica que exercisesData es un array y que dayIndex está dentro del rango válido
         if (!Array.isArray(exercisesData) || dayIndex < 0 || dayIndex >= exercisesData.length) {
             console.warn("Datos de ejercicios no válidos o índice fuera de rango");
@@ -48,28 +46,54 @@ function summarizeExercises(dayIndex) {
         }
 
         const dayExercises = exercisesData[dayIndex]?.ejercicios || [];
-        const statusExercises = getStatusItems('Exercise', dayIndex) || {};
+        //const statusExercises = getStatusItems('Exercise', dayIndex) || {};
 
-        const pendingExercises = dayExercises.filter(exercise => {
-            const status = statusExercises[exercise.id] || 'pendiente'; // Usa el ID único para obtener el estado
-            return status !== 'hecho';
+        // Calcula los ejercicios pendientes usando el estado almacenado
+        const doneExcersices = dayExercises.filter(exercise => {
+            //console.warn(`summarizeExercises-${JSON.stringify(exercise, null, 2)}`);
+            // Verifica si el ID está definido antes de usar split
+            if (!exercise.id || typeof exercise.id !== 'string') {
+                console.warn(`ID no definido o no válido para el ejercicio: ${exercise.nombre}`);
+                return false; // Excluye ejercicios con IDs inválidos
+            }
+            const status = getStatusItem(exercise.id); 
+
+            exercise.tiempo=(exercise.tiempo ? parseInt(exercise.tiempo) : 10);
+
+            console.warn(`summarizeExercises exercise.id: ${exercise.id} exercise.tiempo ${exercise.tiempo}`);
+            return status === 'hecho' ||status === 'omitido' ;
+        });
+
+        const pendingExcersices = dayExercises.filter(exercise => {
+            //console.warn(`summarizeExercises-${JSON.stringify(exercise, null, 2)}`);
+            // Verifica si el ID está definido antes de usar split
+            if (!exercise.id || typeof exercise.id !== 'string') {
+                console.warn(`ID no definido o no válido para el ejercicio: ${exercise.nombre}`);
+                return false; // Excluye ejercicios con IDs inválidos
+            }
+            const status = getStatusItem(exercise.id); 
+
+            exercise.tiempo=(exercise.tiempo ? parseInt(exercise.tiempo) : 10);
+
+            console.warn(`summarizeExercises exercise.id: ${exercise.id} exercise.tiempo ${exercise.tiempo}`);
+            return status === 'pendiente';
         });
 
         const totalExercises = dayExercises.length;
-        const estimatedTime = pendingExercises.reduce((total, exercise) => {
+        const estimatedTime = pendingExcersices.reduce((total, exercise) => {
             return total + (exercise.tiempo ? parseInt(exercise.tiempo) : 10);
         }, 0);
 
-        return `🏋️‍♂️ ${pendingExercises.length}/${totalExercises} Ejercicios, ${estimatedTime} minutos`;
+        console.warn(`summarizeExercises totalExercises: ${totalExercises} estimatedTime: ${estimatedTime}`);
+        return `🏋️‍♂️ ${doneExcersices.length}/${totalExercises} Ejercicios, ${estimatedTime} minutos restantes`;
     } catch (error) {
         console.error("Error al resumir los ejercicios:", error);
         return "Error al cargar los ejercicios.";
     }
 }
 
-function suggestFoodForTime(dayIndex) {
+function suggestFoodForTime(dayIndex, foodData) {
     try {
-        const foodData = getFoodListData();
         const dayFood = foodData[dayIndex] || {};
         const hour = new Date().getHours();
         let foodToEat;

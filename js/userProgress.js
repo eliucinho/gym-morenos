@@ -1,7 +1,5 @@
 // js/userProgress.js
-function analyzeUserProgress(dayIndex) {
-    const exercisesData = getExerciseListData();
-
+function analyzeUserProgress(dayIndex, exercisesData) {
     const dayExercises = exercisesData[dayIndex]?.ejercicios || [];
     const objectiveCount = {};
     const levelCount = {};
