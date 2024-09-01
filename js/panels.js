@@ -19,17 +19,17 @@ function updatePanels(dayIndex, exercisesData, foodData) {
     ];
 
     exercisePanel.innerHTML = sortedExercises.map((exercise, i) =>
-        renderExerciseItem(`Ejercicio ${i + 1}`, exercise, dayIndex)
+        renderExerciseItem(`Ejercicio ${i + 1}`, exercise, dayIndex, `exercise-${dayIndex}-${i + 1}`) // Añade el ID único aquí
     ).join('');
 
     const dayFood = foodData[dayIndex] || {};
 
     foodPanel.innerHTML = `
-        ${renderFoodItem("Comida 1","Desayuno", dayFood.desayuno, dayIndex)}
-        ${renderFoodItem("Comida 2","Media Mañana", dayFood.mediaManana, dayIndex)}
-        ${renderFoodItem("Comida 3","Almuerzo", dayFood.almuerzo, dayIndex)}
-        ${renderFoodItem("Comida 4","Merienda", dayFood.merienda, dayIndex)}
-        ${renderFoodItem("Comida 5","Cena", dayFood.cena, dayIndex)}
-        ${renderFoodItem("Comida 6","Antes de Dormir", dayFood.antesDeDormir, dayIndex)}
+        ${renderFoodItem("Comida 1","Desayuno", dayFood.desayuno, dayIndex, `food-${dayIndex}-1`)}
+        ${renderFoodItem("Comida 2","Media Mañana", dayFood.mediaManana, dayIndex, `food-${dayIndex}-2`)}
+        ${renderFoodItem("Comida 3","Almuerzo", dayFood.almuerzo, dayIndex, `food-${dayIndex}-3`)}
+        ${renderFoodItem("Comida 4","Merienda", dayFood.merienda, dayIndex, `food-${dayIndex}-4`)}
+        ${renderFoodItem("Comida 5","Cena", dayFood.cena, dayIndex, `food-${dayIndex}-5`)}
+        ${renderFoodItem("Comida 6","Antes de Dormir", dayFood.antesDeDormir, dayIndex, `food-${dayIndex}-6`)}
     `;
 }

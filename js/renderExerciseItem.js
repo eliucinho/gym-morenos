@@ -1,12 +1,12 @@
 // js/renderExerciseItem.js
 
-function renderExerciseItem(label, item, dayIndex) {
-    const state = getStatusItem(label, dayIndex, item.nombre);
+function renderExerciseItem(label, item, dayIndex, itemId) {
+    const state = getStatusItem(itemId); // Usa el ID único para obtener el estado
 
     // Aplicar clase 'tachado' si el estado es 'hecho'
     const titleClass = state === 'hecho' ? 'tachado' : '';
 
-    return renderItem(label, item, dayIndex, state, getExerciseSummaryHtml, getExerciseDetailsHtml, titleClass);
+    return renderItem(itemId, label, item, dayIndex, state, getExerciseSummaryHtml, getExerciseDetailsHtml, titleClass);
 }
 
 function getExerciseSummaryHtml(item) {

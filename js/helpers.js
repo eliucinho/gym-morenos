@@ -8,8 +8,3 @@ function determineActivityForTime() {
     if (hour >= 18 && hour < 21) return "🧘‍♀️ Estiramientos y relajación";
     return "🛏️ Descanso";
 }
-
-function getStatusItems(type, dayIndex) {
-    const statusData = JSON.parse(localStorage.getItem(`${type}StatusData`)) || {};
-    return statusData[dayIndex] || {};
-}

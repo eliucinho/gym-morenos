@@ -1,5 +1,7 @@
-//js/userProgress.js
-function analyzeUserProgress(exercisesData, dayIndex) {
+// js/userProgress.js
+function analyzeUserProgress(dayIndex) {
+    const exercisesData = getExerciseListData();
+
     const dayExercises = exercisesData[dayIndex]?.ejercicios || [];
     const objectiveCount = {};
     const levelCount = {};
@@ -9,8 +11,14 @@ function analyzeUserProgress(exercisesData, dayIndex) {
         levelCount[exercise.nivel] = (levelCount[exercise.nivel] || 0) + 1;
     });
 
-    const mainObjective = Object.keys(objectiveCount).reduce((a, b) => objectiveCount[a] > objectiveCount[b] ? a : b);
-    const mainLevel = Object.keys(levelCount).reduce((a, b) => levelCount[a] > levelCount[b] ? a : b);
+    // Asegurar que haya al menos un valor en los contadores antes de usar reduce
+    const mainObjective = Object.keys(objectiveCount).length > 0 
+        ? Object.keys(objectiveCount).reduce((a, b) => objectiveCount[a] > objectiveCount[b] ? a : b)
+        : "Sin objetivo principal";
+
+    const mainLevel = Object.keys(levelCount).length > 0 
+        ? Object.keys(levelCount).reduce((a, b) => levelCount[a] > levelCount[b] ? a : b)
+        : "Sin nivel principal";
 
     return { mainObjective, mainLevel };
 }

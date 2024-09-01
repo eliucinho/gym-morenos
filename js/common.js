@@ -18,24 +18,24 @@ function createMediaElement(item) {
 }
 
 // Función general para renderizar elementos
-function renderItem(label, item, dayIndex, state, getSummaryHtml, getDetailsHtml, titleClass = '') {
+function renderItem(itemId, label, item, dayIndex, state, getSummaryHtml, getDetailsHtml, titleClass = '') {
     const { buttonClass, buttonIcon } = getButtonStateAndClass(state);
     const mediaElement = createMediaElement(item);
     const summaryHtml = getSummaryHtml(item);
-    const detailsHtml = getDetailsHtml(item, mediaElement);
+    const detailsHtml = getDetailsHtml(item, mediaElement);// Genera el ID único basado en el día, tipo, y ID del ítem
 
     return `
         <div class="item-row mb-3">
             <div class="d-flex justify-content-between align-items-center p-2 bg-white shadow-sm rounded">
-                <div class="flex-grow-1 ${titleClass}" data-toggle="collapse" data-target="#collapse-${item.nombre.replace(/\s+/g, '')}" aria-expanded="false" aria-controls="collapse-${item.nombre.replace(/\s+/g, '')}">
+                <div class="flex-grow-1 ${titleClass}" data-toggle="collapse" data-target="#collapse-${item.id}" aria-expanded="false" aria-controls="collapse-${item.id}">
                     <strong>${label ? `${label}: ` : ''}${item.nombre}</strong><br>
                     ${summaryHtml}
                 </div>
-                <button class="btn status-button ${buttonClass} rounded-circle ml-2" data-type="${label.toLowerCase()}" data-name="${item.nombre}" data-state="${state}" data-day="${dayIndex}">
+                <button class="btn status-button ${buttonClass} rounded-circle ml-2" data-id="${itemId}" data-type="${label.toLowerCase()}" data-name="${item.nombre}" data-state="${state}" data-day="${dayIndex}">
                     ${buttonIcon}
                 </button>
             </div>
-            <div class="collapse mt-1" id="collapse-${item.nombre.replace(/\s+/g, '')}">
+            <div class="collapse mt-1" id="collapse-${item.id}">
                 <div class="bg-light p-2 rounded">
                     ${detailsHtml}
                 </div>
