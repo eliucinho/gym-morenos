@@ -25,15 +25,41 @@ function updateDashboard(dayIndex, exercisesData, foodData) {
         const foodSuggestion = document.getElementById('foodSuggestion');
         const objectiveText = document.getElementById('objectiveText');
 
+        // Obtén el progreso de los ejercicios
+        const exerciseData = summarizeExercises(dayIndex); // Asegúrate de pasar exercisesData
+        const [completedExercises, totalExercises, remainingTime] = getExerciseProgress(dayIndex);
+
         currentActivity.innerText = determineActivityForTime();
-        exerciseSummary.innerText = summarizeExercises(dayIndex); // Asegúrate de pasar exercisesData
+        exerciseSummary.innerText = exerciseData;
         foodSuggestion.innerText = suggestFoodForTime(dayIndex, foodData);
 
         const { mainObjective, mainLevel } = analyzeUserProgress(dayIndex, exercisesData);
         objectiveText.innerText = `🎯 ${mainObjective} (${mainLevel})`;
+
+        // Actualiza los progress circles
+        updateProgressCircles(completedExercises, totalExercises, remainingTime);
+
     } catch (error) {
         console.error("Error al actualizar el dashboard:", error);
     }
+}
+
+function updateProgressCircles(completedExercises, totalExercises, remainingTime) {
+    const exerciseProgressCircle = document.getElementById('exerciseProgressCircle');
+    const timeProgressCircle = document.getElementById('timeProgressCircle');
+    const exerciseProgressText = document.getElementById('exerciseProgressText');
+    const timeProgressText = document.getElementById('timeProgressText');
+
+    // Calcula el porcentaje de ejercicios completados
+    const exercisePercentage = (completedExercises / totalExercises) * 100;
+    exerciseProgressCircle.style.background = `conic-gradient(#007bff ${exercisePercentage}%, #e9ecef 0%)`;
+    exerciseProgressText.innerText = `${completedExercises}/${totalExercises}`;
+
+    // Calcula el porcentaje de tiempo restante
+    const totalPlannedTime = totalExercises * 10; // Suponiendo 10 minutos por ejercicio como valor predeterminado
+    const timePercentage = totalPlannedTime === 0 ? 100 : (remainingTime / totalPlannedTime) * 100;
+    timeProgressCircle.style.background = `conic-gradient(#007bff ${100 - timePercentage}%, #e9ecef 0%)`;
+    timeProgressText.innerText = `${remainingTime} min`;
 }
 // Función para resumir los ejercicios
 function summarizeExercises(dayIndex) {
@@ -112,9 +138,49 @@ function suggestFoodForTime(dayIndex, foodData) {
             foodToEat = dayFood.antesDeDormir ? `🥛 ${dayFood.antesDeDormir.nombre}` : 'Antes de Dormir no disponible.';
         }
 
-        return foodToEat;
+        return "¿Que comer a esta hora? "+foodToEat;
     } catch (error) {
         console.error("Error al sugerir comida para el tiempo actual:", error);
         return "Error al cargar sugerencias de comida.";
     }
+}
+
+function getExerciseProgress(dayIndex) {
+    const exercisesData = getExerciseListData();
+    if (!Array.isArray(exercisesData) || dayIndex < 0 || dayIndex >= exercisesData.length) {
+        console.warn("Datos de ejercicios no válidos o índice fuera de rango");
+        return [0, 0, 0]; // Retorna valores por defecto en caso de error
+    }
+
+    const dayExercises = exercisesData[dayIndex]?.ejercicios || [];
+    const completedExercises = dayExercises.filter(exercise => {
+        const status = getStatusItem(exercise.id);
+        return status === 'hecho' || status === 'omitido';
+    }).length;
+
+    const totalExercises = dayExercises.length;
+    const remainingTime = dayExercises.reduce((total, exercise) => {
+        const status = getStatusItem(exercise.id);
+        if (status !== 'hecho' && status !== 'omitido') {
+            total += exercise.tiempo ? parseInt(exercise.tiempo) : 10;
+        }
+        return total;
+    }, 0);
+
+    return [completedExercises, totalExercises, remainingTime];
+}
+
+function updateProgressCircles(completedExercises, totalExercises, remainingTime) {
+    const exerciseProgressCircle = document.getElementById('exerciseProgressCircle');
+    const timeProgressCircle = document.getElementById('timeProgressCircle');
+    const exerciseProgressText = document.getElementById('exerciseProgressText');
+    const timeProgressText = document.getElementById('timeProgressText');
+
+    const exercisePercentage = (completedExercises / totalExercises) * 100;
+    exerciseProgressCircle.style.background = `conic-gradient(#007bff ${exercisePercentage}%, #e9ecef 0%)`;
+    exerciseProgressText.innerText = `${completedExercises}/${totalExercises}`;
+
+    const timePercentage = remainingTime === 0 ? 100 : 0; // Muestra 100% si no queda tiempo
+    timeProgressCircle.style.background = `conic-gradient(#007bff ${timePercentage}%, #e9ecef 0%)`;
+    timeProgressText.innerText = `${remainingTime} min`;
 }

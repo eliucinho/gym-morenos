@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Ejercicios y Alimentación</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+    <div class="container-fluid p-0">
+        <!-- Rediseño del encabezado para ser más pequeño y minimalista -->
+        <div class="header text-center py-2 position-relative">
+            <h2 class="position-relative m-0" style="z-index: 1; font-size: 1.8rem;">Plan de Ejercicios y Alimentación</h2>
+        </div>
+        <!-- Dashboard principal -->
+        <div class="row justify-content-center mb-4">
+            <!-- Sección de progreso -->
+            <div class="col-md-3 text-center">
+                <h5>Progreso de Ejercicios</h5>
+                <div class="progress-container d-flex justify-content-center">
+                    <div class="progress-circle small-circle" id="exerciseProgressCircle">
+                        <div class="circle-text" id="exerciseProgressText">4/4</div>
+                    </div>
+                </div>
+                <p>Objetivo de Ejercicios Hoy</p>
+            </div>
+
+            <div class="col-md-3 text-center">
+                <h5>Tiempo Restante</h5>
+                <div class="progress-container d-flex justify-content-center">
+                    <div class="progress-circle small-circle" id="timeProgressCircle">
+                        <div class="circle-text" id="timeProgressText">0 min</div>
+                    </div>
+                </div>
+                <p>Tiempo Restante</p>
+            </div>
+        </div>
+
+        <!-- Sección de recomendaciones -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6 text-center">
+                <h5 class="mb-1" id="activityTitle">Recomendación</h5>
+                <p class="small mb-0 text-muted" id="currentActivity">Recomendación: 🏃‍♂️ Cardio de tarde</p>
+                <div class="d-flex align-items-center justify-content-center mt-2">
+                    <i class="fas fa-dumbbell text-primary mr-2"></i>
+                    <span id="exerciseSummary" class="small">🏋️‍♂️ 4/4 Ejercicios, 0 minutos restantes</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-center mt-2">
+                    <i class="fas fa-utensils text-warning mr-2"></i>
+                    <span id="foodSuggestion" class="small">🍌 Hummus con palitos de zanahoria y apio</span>
+                </div>
+                <div id="additionalInfo" class="mt-2 d-flex flex-column"></div>
+            </div>
+        </div>
+
+        <!-- Sección de objetivos -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-4 text-center">
+                <h5 class="mb-1">Objetivo:</h5>
+                <div id="objectiveAnimationContainer">
+                    <p id="objectiveText" class="objective-animated pulse-animation mb-0">🎯 General (Principiante)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs para los días de la semana -->
+        <div class="d-flex overflow-auto py-2" id="dayTabsContainer" style="white-space: nowrap;">
+            <ul class="nav nav-pills flex-nowrap mx-auto" id="dayTabs" role="tablist">
+                <!-- Pestañas de los días de la semana -->
+            </ul>
+        </div>
+
+        <!-- Botones para alternar entre paneles -->
+        <div class="d-flex justify-content-center mt-4" id="tabButtonContainer">
+            <button id="exerciseTabButton" class="btn btn-outline-primary btn-lg active mx-2">Ejercicios</button>
+            <button id="foodTabButton" class="btn btn-outline-primary btn-lg mx-2">Comidas</button>
+        </div>
+
+        <!-- Panel de Ejercicios -->
+        <div id="exercisePanelContainer" class="mt-4 px-3">
+            <h2 class="text-center text-primary">Rutina de Ejercicios</h2>
+            <div id="exercisePanel" class="details">
+                <!-- Ejercicios renderizados dinámicamente -->
+            </div>
+        </div>
+
+        <!-- Panel de Comidas -->
+        <div id="foodPanelContainer" class="mt-4 px-3">
+            <h2 class="text-center text-primary">Plan de Comidas</h2>
+            <div id="foodPanel" class="details">
+                <!-- Comidas renderizadas dinámicamente -->
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/helpers.js"></script>
+    <script src="js/fetchData.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/tabSwitching.js"></script>
+    <script src="js/userProgress.js"></script>
+    <script src="js/statusHandlers.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dayTabs.js"></script>
+    <script src="js/panels.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/renderExerciseItem.js"></script>
+    <script src="js/renderFoodItem.js"></script>
+</body>
+
+</html>
