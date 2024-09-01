@@ -14,32 +14,41 @@
     <div class="container-fluid p-0">
         <!-- Rediseño del encabezado para ser más pequeño y minimalista -->
         <div class="header text-center py-2 position-relative">
-            <h2 class="position-relative m-0" style="z-index: 1; font-size: 1.8rem;">Plan de Ejercicios y Alimentación</h2>
+            <h2 class="position-relative m-0" style="z-index: 1; font-size: 1.8rem;">Gymmi</h2>
+            <div id="timeZoneDisplay" class="position-absolute text-muted" style="top: 0; right: 0; padding: 5px; color: rgba(0, 0, 0, 0.1); font-size: 0.6rem;">
+                <!-- Mostrar zona horaria aquí -->
+            </div>
         </div>
-        
+
         <!-- Pantalla del Dashboard -->
         <div id="dashboardScreen">
             <!-- Dashboard principal -->
             <div class="row justify-content-center mb-4">
+                <div class="col-md-4 text-center">
+                    <h5 class="mb-1" id="todayDayTitle"></h5>
+                    <div id="objectiveAnimationContainer">
+                        <p id="objectiveText" class="objective-animated pulse-animation mb-0">🎯 General (Principiante)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-4 d-flex flex-wrap">
                 <!-- Sección de progreso -->
-                <div class="col-md-3 text-center">
+                <div class="col-6 col-md-4 text-center">
                     <h5>Progreso de Ejercicios</h5>
                     <div class="progress-container d-flex justify-content-center">
                         <div class="progress-circle small-circle" id="exerciseProgressCircle">
                             <div class="circle-text" id="exerciseProgressText">4/4</div>
                         </div>
                     </div>
-                    <p>Objetivo de Ejercicios Hoy</p>
                 </div>
 
-                <div class="col-md-3 text-center">
+                <div class="col-6 col-md-4 text-center">
                     <h5>Tiempo Restante</h5>
                     <div class="progress-container d-flex justify-content-center">
                         <div class="progress-circle small-circle" id="timeProgressCircle">
                             <div class="circle-text" id="timeProgressText">0 min</div>
                         </div>
                     </div>
-                    <p>Tiempo Restante</p>
                 </div>
             </div>
 
@@ -60,19 +69,9 @@
                 </div>
             </div>
 
-            <!-- Sección de objetivos -->
-            <div class="row justify-content-center mb-4">
-                <div class="col-md-4 text-center">
-                    <h5 class="mb-1">Objetivo:</h5>
-                    <div id="objectiveAnimationContainer">
-                        <p id="objectiveText" class="objective-animated pulse-animation mb-0">🎯 General (Principiante)</p>
-                    </div>
-                </div>
-            </div>
-
             <!-- Botón para iniciar ejercicios -->
             <div class="text-center">
-                <button id="startExerciseButton" class="btn btn-primary btn-lg">Iniciar Ejercicio</button>
+                <button id="startExerciseButton" class="btn btn-primary btn-lg">Continuar</button>
             </div>
         </div>
 
@@ -132,15 +131,34 @@
     <script src="js/renderFoodItem.js"></script>
 
     <script>
-        document.getElementById('startExerciseButton').addEventListener('click', function () {
+        // Función para mostrar la lista de ejercicios y comidas
+        function showListScreen() {
             document.getElementById('dashboardScreen').style.display = 'none';
             document.getElementById('listScreen').style.display = 'block';
-        });
+        }
+
+        // Manejadores de eventos para cambiar de pantallas
+        document.getElementById('startExerciseButton').addEventListener('click', showListScreen);
 
         document.getElementById('backButton').addEventListener('click', function () {
             document.getElementById('dashboardScreen').style.display = 'block';
             document.getElementById('listScreen').style.display = 'none';
+            initializeDayTitle(); // Actualizar el título al volver al dashboard
         });
+
+        // Detectar scroll hacia arriba para cambiar de pantalla
+        let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        window.addEventListener('scroll', function () {
+            let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScrollTop < lastScrollTop) {
+                // Si el usuario se desplaza hacia arriba, muestra la lista
+                showListScreen();
+            }
+            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Evitar valores negativos
+        });
+
+        // Inicializa el título del día
+        initializeDayTitle();
     </script>
 </body>
 

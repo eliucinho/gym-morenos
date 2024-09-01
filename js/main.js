@@ -1,8 +1,11 @@
 document.addEventListener("DOMContentLoaded", async function () {
     const days = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
-    
+
     // Inicializa el índice del día
     const savedDayIndex = initializeDayIndex();
+
+    // Muestra la zona horaria en la esquina superior derecha
+    document.getElementById('timeZoneDisplay').innerText = `${getTimeZone()}`;
 
     // Carga los datos de ejercicios y comida
     const { exercisesData, foodData } = await fetchData();
@@ -32,4 +35,39 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Configura la funcionalidad de alternancia de pestañas
     setupTabSwitching();
+
+    // Desplaza la pestaña activa al centro si es viernes o domingo y la pantalla es pequeña
+    if ((savedDayIndex === 4 || savedDayIndex === 6) && window.innerWidth < 768) {
+        const activeTab = document.querySelector('.nav-link.active');
+        if (activeTab) {
+            activeTab.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+        }
+    }
+
+    // Inicializa el título del día
+    initializeDayTitle();
 });
+
+// Función para obtener la zona horaria
+function getTimeZone() {
+    return Intl.DateTimeFormat().resolvedOptions().timeZone;
+}
+
+// Inicializa el contenido del día de hoy
+function initializeDayTitle() {
+    const days = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+    const todayDayTitle = document.getElementById('todayDayTitle');
+    const savedDayIndex = getSavedDayIndex();
+    const todayDay = new Date().getDay();
+    const currentDayIndex = todayDay === 0 ? 6 : todayDay - 1; // Ajusta para que Lunes sea 0 y Domingo sea 6
+    const timeZone = getTimeZone();
+
+    // Mostrar solo el día de hoy si es el mismo que el seleccionado
+    if (savedDayIndex && parseInt(savedDayIndex) === currentDayIndex) {
+        todayDayTitle.innerText = `¡${days[currentDayIndex]}!`;
+    } else if (savedDayIndex) {
+        todayDayTitle.innerText = `Día seleccionado: ${days[savedDayIndex]}, Hoy es ${days[currentDayIndex]} (${timeZone})`;
+    } else {
+        todayDayTitle.innerText = `Hoy es ${days[currentDayIndex]} (${timeZone})`;
+    }
+}

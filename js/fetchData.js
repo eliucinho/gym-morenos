@@ -33,7 +33,7 @@ function assignUniqueIdsExersise(items, type, dayIndex) {
             if (ejercicio) {
                 // Asigna un ID único basado en el día, tipo y el índice del ítem
                 ejercicio.id = `${type}-${dayIndex}-${i + 1}`;
-                console.info(`Asignando ID exercise: ${ejercicio.id} para ${type}`);
+                //console.info(`Asignando ID exercise: ${ejercicio.id} para ${type}`);
             } else {
                 console.warn(`ejercicio no encontrado para ${type} en índice ${i}`);
             }
