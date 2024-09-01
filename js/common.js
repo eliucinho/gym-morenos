@@ -3,18 +3,43 @@
 // Función para crear un elemento de medios (video o imagen)
 function createMediaElement(item) {
     if (item.video && item.video !== "") {
-        return item.video.endsWith('.mp4') ?
-            `<video class="rounded-lg w-100 mt-2" controls>
-                <source src="${item.video}" type="video/mp4">
-             </video>` :
-            `<iframe class="w-100 mt-2" height="150" src="https://www.youtube.com/embed/${item.video}" 
-            title="YouTube video player" frameborder="0" 
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+        if (item.video.endsWith('.mp4')) {
+            // Video MP4
+            return `<video class="rounded-lg w-100 mt-2" controls>
+                        <source src="${item.video}" type="video/mp4">
+                    </video>`;
+        } else if (item.video.endsWith('.gif')) {
+            // Imagen GIF
+            return `<img src="${item.video}" alt="${item.nombre}" class="rounded-lg w-100 mt-2">`;
+        } else if (item.video.includes('youtube.com') || item.video.includes('youtu.be')) {
+            // Video de YouTube
+            const videoId = extractYouTubeVideoId(item.video);
+            if (videoId) {
+                return `<iframe class="w-100 mt-2" height="315" src="https://www.youtube.com/embed/${videoId}" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+            }
+        } else {
+            // Otros tipos de video
+            return `<iframe class="w-100 mt-2" height="150" src="${item.video}" 
+                        title="Video player" frameborder="0" 
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+        }
     } else if (item.foto && item.foto !== "") {
+        // Imagen
         return `<img src="${item.foto}" alt="${item.nombre}" class="rounded-lg w-100 mt-2">`;
     }
     return '';
+}
+
+// Función para extraer el ID del video de YouTube
+function extractYouTubeVideoId(url) {
+    // Regex para capturar el ID de un enlace de YouTube en diferentes formatos
+    const regex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+    const matches = url.match(regex);
+    return matches ? matches[1] : null;
 }
 
 // Función general para renderizar elementos

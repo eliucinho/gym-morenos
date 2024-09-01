@@ -2,37 +2,48 @@
   "rutina": [
     {
       "dia": "Lunes",
+      "objetivo": "Bíceps, Tríceps y Pecho",
       "ejercicios": [
         {
           "tipo": "calentamiento",
           "nombre": "Elíptica",
-          "peso": "N/A",
           "numeroRepeticion": 1,
+          "peso": "N/A",
           "series": 1,
+          
           "objetivo": "Calentamiento",
           "nivel": "Principiante",
-          "tiempo": "10 minutos",
-          "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
+          "tiempo": "10 min",
+          "explicacion": "Realiza un calentamiento de 10 minutos con elíptica.",
+          "herramienta": "elíptica",
+          "lugar": "gym",
+          "video": "https://youtu.be/4qewJhqTmlw?t=36"
         },
         {
           "tipo": "ejercicio",
-          "nombre": "Bíceps con mancuernas",
+          "nombre": "Bíceps mancuernas",
           "peso": "5kg",
           "numeroRepeticion": 20,
           "series": 3,
           "objetivo": "Bíceps",
           "nivel": "Principiante",
-          "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
+          "explicacion": "De pie, con una mancuerna en cada mano, realiza curls para trabajar los bíceps.",
+          "herramienta": "mancuernas",
+          "lugar": "gym",
+          "video": "https://media1.tenor.com/m/6uinYQq-1TYAAAAd/biceps-curl.gif"
         },
         {
           "tipo": "ejercicio",
-          "nombre": "Tríceps con mancuernas",
+          "nombre": "Tríceps mancuernas",
           "peso": "5kg",
           "numeroRepeticion": 10,
           "series": 3,
           "objetivo": "Tríceps",
           "nivel": "Principiante",
-          "video": "https://videos.bodybuilding.com/video/mp4/62000/62822m.mp4"
+          "explicacion": "Con una mancuerna, realiza extensiones de tríceps sobre la cabeza.",
+          "herramienta": "mancuernas",
+          "lugar": "gym",
+          "video": "https://media1.tenor.com/m/BlRWwnjGUPoAAAAC/bodybuilder-muscle.gif"
         },
         {
           "tipo": "ejercicio",
@@ -41,8 +52,11 @@
           "numeroRepeticion": 20,
           "series": 3,
           "objetivo": "Pecho",
-          "nivel": "Intermediario",
-          "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
+          "nivel": "Principiante",
+          "explicacion": "Sentado en la máquina de chest press, empuja el peso hacia adelante para trabajar el pecho.",
+          "herramienta": "máquina",
+          "lugar": "gym",
+          "video": "https://media1.tenor.com/m/JzgwE1XRx_MAAAAd/chris-mazzella-chris-mazz-chest-press.gif"
         },
         {
           "tipo": "ejercicio",
@@ -51,8 +65,11 @@
           "numeroRepeticion": 20,
           "series": 3,
           "objetivo": "Bíceps",
-          "nivel": "Intermediario",
-          "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
+          "nivel": "Principiante",
+          "explicacion": "Realiza curls de bíceps con barra para trabajar los músculos del brazo.",
+          "herramienta": "barra",
+          "lugar": "gym",
+          "video": "https://media1.tenor.com/m/RL3CbJbPvhwAAAAC/standing-barbell-biceps-curl.gif"
         },
         {
           "tipo": "ejercicio",
@@ -61,8 +78,11 @@
           "numeroRepeticion": 15,
           "series": 3,
           "objetivo": "Tríceps",
-          "nivel": "Intermediario",
-          "video": "https://videos.bodybuilding.com/video/mp4/62000/62822m.mp4"
+          "nivel": "Principiante",
+          "explicacion": "En la máquina de poleas, usa cuerdas para realizar extensiones de tríceps.",
+          "herramienta": "máquina",
+          "lugar": "gym",
+          "video": "https://media1.tenor.com/m/Kj3K10KHPGgAAAAC/rope-push-down.gif"
         },
         {
           "tipo": "ejercicio",
@@ -71,8 +91,11 @@
           "numeroRepeticion": 10,
           "series": 3,
           "objetivo": "Pecho",
-          "nivel": "Intermediario",
-          "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
+          "nivel": "Principiante",
+          "explicacion": "Acostado en un banco inclinado, empuja el peso hacia arriba para trabajar el pecho superior.",
+          "herramienta": "barra",
+          "lugar": "gym",
+"video":"https://media1.tenor.com/m/eCXs6gZigQcAAAAd/incline-smith-bar-press.gif"
         },
         {
           "tipo": "ejercicio",
@@ -81,522 +104,591 @@
           "numeroRepeticion": 15,
           "series": 3,
           "objetivo": "Pecho",
-          "nivel": "Intermediario",
-          "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
+          "nivel": "Principiante",
+          "explicacion": "Usa la máquina butterfly para trabajar los músculos pectorales.",
+          "herramienta": "máquina",
+          "lugar": "gym",
+          "video":"https://media1.tenor.com/m/l6DtdVZFHVgAAAAC/rear-delt-fly-machine.gif"
         },
         {
           "tipo": "cardio",
           "nombre": "Elíptica",
-          "peso": "N/A",
           "numeroRepeticion": 1,
+          "peso": "N/A",
           "series": 1,
           "objetivo": "Cardio",
           "nivel": "Principiante",
-          "tiempo": "30 minutos",
-          "video": ""
+          "tiempo": "30 min",
+          "explicacion": "Realiza 30 minutos de cardio en la elíptica.",
+          "herramienta": "elíptica",
+          "lugar": "gym",
+          "video":"https://youtu.be/-YnEe2eZEOI"
         },
         {
           "tipo": "estiramiento",
           "nombre": "Estiramientos de brazos, pecho y piernas",
-          "peso": "N/A",
           "numeroRepeticion": 1,
+          "peso": "N/A",
           "series": 1,
           "objetivo": "Estiramiento",
           "nivel": "Principiante",
-          "video": ""
+          "tiempo": "10 min",
+          "explicacion": "Realiza estiramientos para relajar los músculos trabajados.",
+          "lugar": "casa",
+          "video":"https://youtu.be/YQQfhILVR7c?t=13"
         }
       ]
     },
     {
       "dia": "Martes",
+      "objetivo": "Piernas, Glúteos y Abdomen",
       "ejercicios": [
         {
           "tipo": "calentamiento",
-          "nombre": "Cinta de correr",
-          "peso": "N/A",
+          "nombre": "Bicicleta estática",
           "numeroRepeticion": 1,
           "series": 1,
           "objetivo": "Calentamiento",
           "nivel": "Principiante",
-          "tiempo": "10 minutos",
-          "video": ""
+          "tiempo": "10 min",
+          "explicacion": "Realiza un calentamiento de 10 minutos con bicicleta estática.",
+          "herramienta": "elíptica",
+          "lugar": "gym"
         },
         {
           "tipo": "ejercicio",
-          "nombre": "Remo con barra",
-          "peso": "20kg",
-          "numeroRepeticion": 15,
-          "series": 3,
-          "objetivo": "Espalda",
-          "nivel": "Intermediario",
-          "video": "https://videos.bodybuilding.com/video/mp4/62000/62782m.mp4" 
-        },
-        {
-          "tipo": "ejercicio",
-          "nombre": "Elevaciones laterales con mancuernas",
-          "peso": "5kg",
-          "numeroRepeticion": 15,
-          "series": 3,
-          "objetivo": "Hombros",
-          "nivel": "Principiante",
-          "video": "https://videos.bodybuilding.com/video/mp4/62000/62812m.mp4" 
-        },
-        {
-          "tipo": "ejercicio",
-          "nombre": "Jalón al pecho",
+          "nombre": "Piernas extensión",
           "peso": "25kg",
           "numeroRepeticion": 15,
           "series": 3,
-          "objetivo": "Espalda",
-          "nivel": "Intermediario",
-          "video": "https://videos.bodybuilding.com/video/mp4/62000/62832m.mp4" 
-        },
-        {
-          "tipo": "ejercicio",
-          "nombre": "Press militar con mancuernas",
-          "peso": "10kg",
-          "numeroRepeticion": 15,
-          "series": 3,
-          "objetivo": "Hombros",
-          "nivel": "Intermediario",
-          "video": "https://videos.bodybuilding.com/video/mp4/62000/62842m.mp4" 
-        },
-        {
-          "tipo": "ejercicio",
-          "nombre": "Remo con mancuernas",
-          "peso": "10kg",
-          "numeroRepeticion": 15,
-          "series": 3,
-          "objetivo": "Espalda",
-          "nivel": "Intermediario",
-          "video": "https://videos.bodybuilding.com/video/mp4/62000/62852m.mp4" 
-        },
-        {
-          "tipo": "ejercicio",
-          "nombre": "Elevaciones frontales con mancuernas",
-          "peso": "5kg",
-          "numeroRepeticion": 15,
-          "series": 3,
-          "objetivo": "Hombros",
+          "objetivo": "Piernas",
           "nivel": "Principiante",
-          "video": "https://videos.bodybuilding.com/video/mp4/62000/62812m.mp4" 
+          "explicacion": "Usa la máquina de extensión de piernas para fortalecer los cuádriceps.",
+          "herramienta": "máquina",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Abdomen rotary torso",
+          "peso": "25kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Abdomen",
+          "nivel": "Principiante",
+          "explicacion": "Usa la máquina rotary torso para trabajar los oblicuos.",
+          "herramienta": "máquina",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Piernas seated leg curl",
+          "peso": "30kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Piernas",
+          "nivel": "Principiante",
+          "explicacion": "Usa la máquina de leg curl sentado para trabajar los isquiotibiales.",
+          "herramienta": "máquina",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Abdomen",
+          "peso": "40kg",
+          "numeroRepeticion": 50,
+          "series": 3,
+          "objetivo": "Abdomen",
+          "nivel": "Principiante",
+          "explicacion": "Usa la máquina de crunch abdominal para fortalecer el abdomen.",
+          "herramienta": "máquina",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Piernas gluteaeus",
+          "peso": "15kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Glúteos",
+          "nivel": "Principiante",
+          "explicacion": "Usa la máquina de glúteos para fortalecer los músculos del glúteo.",
+          "herramienta": "máquina",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Abdominales inferiores inclinado",
+          "peso": "0kg",
+          "numeroRepeticion": 20,
+          "series": 3,
+          "objetivo": "Abdomen",
+          "nivel": "Principiante",
+          "explicacion": "Realiza abdominales inferiores en un banco inclinado sin peso adicional.",
+          "lugar": "gym"
         },
         {
           "tipo": "cardio",
-          "nombre": "Elíptica",
-          "peso": "N/A",
+          "nombre": "Correr en cinta",
           "numeroRepeticion": 1,
           "series": 1,
           "objetivo": "Cardio",
           "nivel": "Principiante",
-          "tiempo": "20 minutos",
-          "video": ""
+          "tiempo": "20 min",
+          "explicacion": "Corre en la cinta durante 20 minutos a un nivel 1.",
+          "herramienta": "cinta de correr",
+          "lugar": "gym"
         },
         {
           "tipo": "estiramiento",
-          "nombre": "Estiramientos de espalda y hombros",
-          "peso": "N/A",
+          "nombre": "Estiramientos",
           "numeroRepeticion": 1,
           "series": 1,
           "objetivo": "Estiramiento",
           "nivel": "Principiante",
-          "video": ""
+          "tiempo": "10 min",
+          "explicacion": "Realiza estiramientos para relajar los músculos trabajados.",
+          "lugar": "gym"
         }
       ]
     },
     {
       "dia": "Miércoles",
+      "objetivo": "Espalda y Hombros",
       "ejercicios": [
         {
           "tipo": "calentamiento",
-          "nombre": "Bicicleta estática",
-          "peso": "N/A",
+          "nombre": "Salto de cuerda",
           "numeroRepeticion": 1,
           "series": 1,
           "objetivo": "Calentamiento",
           "nivel": "Principiante",
-          "tiempo": "10 minutos",
-          "video": ""
+          "tiempo": "10 min",
+          "explicacion": "Realiza un calentamiento de 10 minutos con salto de cuerda.",
+          "herramienta": "máquina de remo",
+          "lugar": "gym"
         },
         {
           "tipo": "ejercicio",
-          "nombre": "Sentadillas",
-          "peso": "20kg",
+          "nombre": "Pull-down",
+          "peso": "30kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Espalda",
+          "nivel": "Principiante",
+          "explicacion": "Usa la máquina de pull-down para fortalecer los músculos de la espalda.",
+          "herramienta": "máquina",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Remo sentado",
+          "peso": "25kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Espalda",
+          "nivel": "Principiante",
+          "explicacion": "Realiza el ejercicio de remo sentado para trabajar la espalda media.",
+          "herramienta": "máquina",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Hyperextensions",
+          "peso": "0kg",
           "numeroRepeticion": 20,
           "series": 3,
-          "objetivo": "Piernas",
-          "nivel": "Intermediario",
-          "video": "https://videos.bodybuilding.com/video/mp4/62000/62862m.mp4" 
+          "objetivo": "Espalda",
+          "nivel": "Principiante",
+          "explicacion": "Realiza extensiones de espalda (hyperextensions) en un banco para fortalecer la zona lumbar.",
+          "herramienta": "banco",
+          "lugar": "gym"
         },
         {
           "tipo": "ejercicio",
-          "nombre": "Prensa de piernas",
+          "nombre": "Press militar",
+          "peso": "15kg",
+          "numeroRepeticion": 12,
+          "series": 3,
+          "objetivo": "Hombros",
+          "nivel": "Principiante",
+          "explicacion": "Realiza press militar con barra para trabajar los músculos del hombro.",
+          "herramienta": "barra",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Elevaciones laterales",
+          "peso": "5kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Hombros",
+          "nivel": "Principiante",
+          "explicacion": "Usa mancuernas para realizar elevaciones laterales y fortalecer los hombros.",
+          "herramienta": "mancuernas",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Shrugs con mancuernas",
+          "peso": "20kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Hombros",
+          "nivel": "Principiante",
+          "explicacion": "Realiza encogimientos de hombros (shrugs) con mancuernas para trabajar el trapecio.",
+          "herramienta": "mancuernas",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "cardio",
+          "nombre": "Bicicleta estática",
+          "numeroRepeticion": 1,
+          "series": 1,
+          "objetivo": "Cardio",
+          "nivel": "Principiante",
+          "tiempo": "30 min",
+          "explicacion": "Realiza 30 minutos de cardio en la bicicleta estática.",
+          "herramienta": "bicicleta estática",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "estiramiento",
+          "nombre": "Estiramientos de espalda y hombros",
+          "numeroRepeticion": 1,
+          "series": 1,
+          "objetivo": "Estiramiento",
+          "nivel": "Principiante",
+          "tiempo": "10 min",
+          "explicacion": "Realiza estiramientos específicos para relajar la espalda y los hombros.",
+          "lugar": "gym"
+        }
+      ]
+    },
+    {
+      "dia": "Jueves",
+      "objetivo": "Core y Piernas",
+      "ejercicios": [
+        {
+          "tipo": "calentamiento",
+          "nombre": "Remo en máquina",
+          "numeroRepeticion": 1,
+          "series": 1,
+          "objetivo": "Calentamiento",
+          "nivel": "Principiante",
+          "tiempo": "10 min",
+          "explicacion": "Realiza un calentamiento de 10 minutos con remo en máquina.",
+          "herramienta": "elíptica",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Sentadilla libre",
+          "peso": "20kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Piernas",
+          "nivel": "Principiante",
+          "explicacion": "Realiza sentadillas con una barra para fortalecer las piernas y los glúteos.",
+          "herramienta": "barra",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Leg press",
           "peso": "50kg",
           "numeroRepeticion": 15,
           "series": 3,
           "objetivo": "Piernas",
-          "nivel": "Intermediario",
-          "video": "https://videos.bodybuilding.com/video/mp4/62000/62872m.mp4"     },
-          {
-            "tipo": "ejercicio",
-            "nombre": "Curl de piernas",
-            "peso": "25kg",
-            "numeroRepeticion": 15,
-            "series": 3,
-            "objetivo": "Piernas",
-            "nivel": "Intermediario",
-            "video": "https://videos.bodybuilding.com/video/mp4/62000/62882m.mp4" 
-          },
-          {
-            "tipo": "ejercicio",
-            "nombre": "Extensiones de piernas",
-            "peso": "20kg",
-            "numeroRepeticion": 15,
-            "series": 3,
-            "objetivo": "Piernas",
-            "nivel": "Principiante",
-            "video": "https://videos.bodybuilding.com/video/mp4/62000/62892m.mp4"
-          },
-          {
-            "tipo": "ejercicio",
-            "nombre": "Elevación de talones",
-            "peso": "25kg",
-            "numeroRepeticion": 20,
-            "series": 3,
-            "objetivo": "Pantorrillas",
-            "nivel": "Intermediario",
-            "video": "https://videos.bodybuilding.com/video/mp4/62000/62902m.mp4" 
-          },
-          {
-            "tipo": "cardio",
-            "nombre": "Elíptica",
-            "peso": "N/A",
-            "numeroRepeticion": 1,
-            "series": 1,
-            "objetivo": "Cardio",
-            "nivel": "Principiante",
-            "tiempo": "30 minutos",
-            "video": ""
-          },
-          {
-            "tipo": "estiramiento",
-            "nombre": "Estiramientos de piernas y espalda baja",
-            "peso": "N/A",
-            "numeroRepeticion": 1,
-            "series": 1,
-            "objetivo": "Estiramiento",
-            "nivel": "Principiante",
-            "video": ""
-          }
-        ]
-      },
-      {
-        "dia": "Jueves",
-        "ejercicios": [
-          {
-            "tipo": "calentamiento",
-            "nombre": "Elíptica",
-            "peso": "N/A",
-            "numeroRepeticion": 1,
-            "series": 1,
-            "objetivo": "Calentamiento",
-            "nivel": "Principiante",
-            "tiempo": "10 minutos",
-            "video": ""
-          },
-          {
-            "tipo": "ejercicio",
-            "nombre": "Bíceps con mancuernas",
-            "peso": "5kg",
-            "numeroRepeticion": 20,
-            "series": 3,
-            "objetivo": "Bíceps",
-            "nivel": "Principiante",
-            "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4" 
-          },
-          {
-            "tipo": "ejercicio",
-            "nombre": "Tríceps con mancuernas",
-            "peso": "5kg",
-            "numeroRepeticion": 10,
-            "series": 3,
-            "objetivo": "Tríceps",
-            "nivel": "Principiante",
-            "video": "https://videos.bodybuilding.com/video/mp4/62000/62822m.mp4"
-          },
-          {
-            "tipo": "ejercicio",
-            "nombre": "Pecho seated chest press",
-            "peso": "25kg",
-            "numeroRepeticion": 20,
-            "series": 3,
-            "objetivo": "Pecho",
-            "nivel": "Intermediario",
-            "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
-          },
-          {
-            "tipo": "ejercicio",
-            "nombre": "Bíceps curl",
-            "peso": "10kg",
-            "numeroRepeticion": 20,
-            "series": 3,
-            "objetivo": "Bíceps",
-            "nivel": "Intermediario",
-            "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
-          },
-          {
-            "tipo": "ejercicio",
-            "nombre": "Tríceps con cuerdas",
-            "peso": "10kg",
-            "numeroRepeticion": 15,
-            "series": 3,
-            "objetivo": "Tríceps",
-            "nivel": "Intermediario",
-            "video": "https://videos.bodybuilding.com/video/mp4/62000/62822m.mp4" 
-          },
-          {
-            "tipo": "ejercicio",
-            "nombre": "Pecho incline chest press",
-            "peso": "20kg",
-            "numeroRepeticion": 10,
-            "series": 3,
-            "objetivo": "Pecho",
-            "nivel": "Intermediario",
-            "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
-          },
-          {
-            "tipo": "ejercicio",
-            "nombre": "Pecho butterfly",
-            "peso": "15kg",
-            "numeroRepeticion": 15,
-            "series": 3,
-            "objetivo": "Pecho",
-            "nivel": "Intermediario",
-            "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
-          },
-          {
-            "tipo": "cardio",
-            "nombre": "Elíptica",
-            "peso": "N/A",
-            "numeroRepeticion": 1,
-            "series": 1,
-            "objetivo": "Cardio",
-            "nivel": "Principiante",
-            "tiempo": "30 minutos",
-            "video": ""
-          },
-          {
-            "tipo": "estiramiento",
-            "nombre": "Estiramientos de brazos, pecho y piernas",
-            "peso": "N/A",
-            "numeroRepeticion": 1,
-            "series": 1,
-            "objetivo": "Estiramiento",
-            "nivel": "Principiante",
-            "video": ""
-          }
-        ]
-      },
-      {
-        "dia": "Viernes",
-        "ejercicios": [
-          {
-            "tipo": "calentamiento",
-            "nombre": "Elíptica",
-            "peso": "N/A",
-            "numeroRepeticion": 1,
-            "series": 1,
-            "objetivo": "Calentamiento",
-            "nivel": "Principiante",
-            "tiempo": "10 minutos",
-            "video": ""
-          },
-          {
-            "tipo": "ejercicio",
-            "nombre": "Sentadillas",
-            "peso": "20kg",
-            "numeroRepeticion": 15,
-            "series": 1,
-            "objetivo": "Piernas",
-            "nivel": "Intermediario",
-            "video": "https://videos.bodybuilding.com/video/mp4/62000/62862m.mp4" 
-          },
-          {
-            "tipo": "ejercicio",
-            "nombre": "Press de pecho con mancuernas",
-            "peso": "10kg",
-            "numeroRepeticion": 15,
-            "series": 1,
-            "objetivo": "Pecho",
-            "nivel": "Intermediario",
-            "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4" 
-          },
-          {
-            "tipo": "ejercicio",
-            "nombre": "Remo con barra",
-            "peso": "20kg",
-            "numeroRepeticion": 15,
-            "series": 1,
-            "objetivo": "Espalda",
-            "nivel": "Intermediario",
-            "video": "https://videos.bodybuilding.com/video/mp4/62000/62782m.mp4" 
-          },
-          {
-            "tipo": "ejercicio",
-            "nombre": "Curl de bíceps con mancuernas",
-            "peso": "10kg",
-            "numeroRepeticion": 15,
-            "series": 1,
-            "objetivo": "Bíceps",
-            "nivel": "Intermediario",
-            "video": "https://videos.bodybuilding.com/video/mp4/62000/62792m.mp4"
-          },
-          {
-            "tipo": "ejercicio",
-            "nombre": "Tríceps con cuerdas",
-            "peso": "10kg",
-            "numeroRepeticion": 15,
-            "series": 1,
-            "objetivo": "Tríceps",
-            "nivel": "Intermediario",
-            "video": "https://videos.bodybuilding.com/video/mp4/62000/62822m.mp4"
-          },
-          {
-            "tipo": "ejercicio",
-            "nombre": "Elevaciones laterales con mancuernas",
-            "peso": "5kg",
-            "numeroRepeticion": 15,
-            "series": 1,
-            "objetivo": "Hombros",
-            "nivel": "Principiante",
-            "video": "https://videos.bodybuilding.com/video/mp4/62000/62812m.mp4"
-          },
-          {
-            "tipo": "ejercicio",
-            "nombre": "Planchas",
-            "peso": "N/A",
-            "numeroRepeticion": 1,
-            "series": 1,
-            "objetivo": "Core",
-            "nivel": "Intermediario",
-            "video": "https://videos.bodybuilding.com/video/mp4/62000/62912m.mp4"
-          },
-          {
-            "tipo": "cardio",
-            "nombre": "Elíptica",
-            "peso": "N/A",
-            "numeroRepeticion": 1,
-            "series": 1,
-            "objetivo": "Cardio",
-            "nivel": "Principiante",
-            "tiempo": "30 minutos",
-            "video": ""
-          },
-          {
-            "tipo": "estiramiento",
-            "nombre": "Estiramientos completos de cuerpo",
-            "peso": "N/A",
-            "numeroRepeticion": 1,
-            "series": 1,
-            "objetivo": "Estiramiento",
-            "nivel": "Principiante",
-            "video": ""
-          }
-        ]
-      },
-      {
-        "dia": "Sábado",
-        "ejercicios": [
-          {
-            "tipo": "calentamiento",
-            "nombre": "Descanso activo (Caminatas, Yoga, Estiramientos ligeros)",
-            "peso": "N/A",
-            "numeroRepeticion": 1,
-            "series": 1,
-            "objetivo": "General",
-            "nivel": "Principiante",
-            "tiempo": "30 minutos",
-            "video": ""
-          },
-          {
-            "tipo": "ejercicio",
-            "nombre": "Descanso activo",
-            "peso": "N/A",
-            "numeroRepeticion": 0,
-            "series": 0,
-            "objetivo": "General",
-            "nivel": "Principiante",
-            "video": ""
-          },
-          {
-            "tipo": "cardio",
-            "nombre": "N/A",
-            "peso": "N/A",
-            "numeroRepeticion": 0,
-            "series": 0,
-            "objetivo": "Cardio",
-            "nivel": "N/A",
-            "tiempo": "",
-            "video": ""
-          },
-          {
-            "tipo": "estiramiento",
-            "nombre": "Estiramientos ligeros",
-            "peso": "N/A",
-            "numeroRepeticion": 1,
-            "series": 1,
-            "objetivo": "Estiramiento",
-            "nivel": "Principiante",
-            "video": ""
-          }
-        ]
-      },
-      {
-        "dia": "Domingo",
-        "ejercicios": [
-          {
-            "tipo": "calentamiento",
-            "nombre": "Descanso activo (Caminatas, Yoga, Estiramientos ligeros)",
-            "peso": "N/A",
-            "numeroRepeticion": 1,
-            "series": 1,
-            "objetivo": "General",
-            "nivel": "Principiante",
-            "tiempo": "30 minutos",
-            "video": ""
-          },
-          {
-            "tipo": "ejercicio",
-            "nombre": "Descanso activo",
-            "peso": "N/A",
-            "numeroRepeticion": 0,
-            "series": 0,
-            "objetivo": "General",
-            "nivel": "Principiante",
-            "video": ""
-          },
-          {
-            "tipo": "cardio",
-            "nombre": "N/A",
-            "peso": "N/A",
-            "numeroRepeticion": 0,
-            "series": 0,
-            "objetivo": "Cardio",
-            "nivel": "N/A",
-            "tiempo": "",
-            "video": ""
-          },
-          {
-            "tipo": "estiramiento",
-            "nombre": "Estiramientos ligeros",
-            "peso": "N/A",
-            "numeroRepeticion": 1,
-            "series": 1,
-            "objetivo": "Estiramiento",
-            "nivel": "Principiante",
-            "video": ""
-          }
-        ]
-      }
-    ]
-  }
+          "nivel": "Principiante",
+          "explicacion": "Usa la máquina de leg press para trabajar los cuádriceps y glúteos.",
+          "herramienta": "máquina",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Extensión de piernas",
+          "peso": "25kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Piernas",
+          "nivel": "Principiante",
+          "explicacion": "Realiza extensiones de piernas en máquina para fortalecer los cuádriceps.",
+          "herramienta": "máquina",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Puente de glúteos",
+          "peso": "10kg",
+          "numeroRepeticion": 20,
+          "series": 3,
+          "objetivo": "Glúteos",
+          "nivel": "Principiante",
+          "explicacion": "Realiza puentes de glúteos con una barra o disco sobre las caderas para trabajar los glúteos.",
+          "herramienta": "barra o disco",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Kickbacks",
+          "numeroRepeticion": 20,
+          "series": 3,
+          "objetivo": "Glúteos",
+          "nivel": "Principiante",
+          "explicacion": "Realiza patadas hacia atrás (kickbacks) para fortalecer los glúteos.",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "cardio",
+          "nombre": "Cinta de correr",
+          "numeroRepeticion": 1,
+          "series": 1,
+          "objetivo": "Cardio",
+          "nivel": "Principiante",
+          "tiempo": "20 min",
+          "explicacion": "Corre en la cinta durante 20 minutos a un ritmo constante.",
+          "herramienta": "cinta de correr",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "estiramiento",
+          "nombre": "Estiramientos de piernas y glúteos",
+          "numeroRepeticion": 1,
+          "series": 1,
+          "objetivo": "Estiramiento",
+          "nivel": "Principiante",
+          "tiempo": "10 min",
+          "explicacion": "Realiza estiramientos para relajar las piernas y los glúteos después del ejercicio.",
+          "lugar": "gym"
+        }
+      ]
+    },
+    {
+      "dia": "Viernes",
+      "objetivo": "Hombros y Espalda",
+      "ejercicios": [
+        {
+          "tipo": "calentamiento",
+          "nombre": "Remo en máquina",
+          "numeroRepeticion": 1,
+          "series": 1,
+          "objetivo": "Calentamiento",
+          "nivel": "Principiante",
+          "tiempo": "10 min",
+          "explicacion": "Realiza un calentamiento de 10 minutos con remo en máquina.",
+          "herramienta": "máquina de remo",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Curl con barra",
+          "peso": "10kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Bíceps",
+          "nivel": "Principiante",
+          "explicacion": "Realiza curls de bíceps con barra para fortalecer los músculos del brazo.",
+          "herramienta": "barra",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Curl alternado con mancuernas",
+          "peso": "5kg",
+          "numeroRepeticion": 20,
+          "series": 3,
+          "objetivo": "Bíceps",
+          "nivel": "Principiante",
+          "explicacion": "Alterna los curls de bíceps con mancuernas para un trabajo completo del brazo.",
+          "herramienta": "mancuernas",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Extensión con cuerda",
+          "peso": "10kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Tríceps",
+          "nivel": "Principiante",
+          "explicacion": "Usa la máquina de poleas con cuerda para trabajar los tríceps.",
+          "herramienta": "máquina",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Fondos en paralelas",
+          "numeroRepeticion": 12,
+          "series": 3,
+          "objetivo": "Tríceps",
+          "nivel": "Principiante",
+          "explicacion": "Realiza fondos en paralelas para trabajar los tríceps y el pecho.",
+          "herramienta": "paralelas",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Press de banca",
+          "peso": "20kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Pecho",
+          "nivel": "Principiante",
+          "explicacion": "Realiza press de banca con barra para trabajar el pecho y los tríceps.",
+          "herramienta": "barra",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Apertura con mancuernas",
+          "peso": "10kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Pecho",
+          "nivel": "Principiante",
+          "explicacion": "Realiza aperturas con mancuernas para trabajar los músculos del pecho.",
+          "herramienta": "mancuernas",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "cardio",
+          "nombre": "Elíptica",
+          "numeroRepeticion": 1,
+          "series": 1,
+          "objetivo": "Cardio",
+          "nivel": "Principiante",
+          "tiempo": "20 min",
+          "explicacion": "Realiza 20 minutos de cardio en la elíptica.",
+          "herramienta": "elíptica",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "estiramiento",
+          "nombre": "Estiramientos de Bíceps, Tríceps y Pecho",
+          "numeroRepeticion": 1,
+          "series": 1,
+          "objetivo": "Estiramiento",
+          "nivel": "Principiante",
+          "tiempo": "10 min",
+          "explicacion": "Realiza estiramientos para relajar los músculos trabajados.",
+          "lugar": "gym"
+        }
+      ]
+    },
+    {
+      "dia": "Sábado",
+      "objetivo": "Espalda, Abdomen y Cardio",
+      "ejercicios": [
+        {
+          "tipo": "calentamiento",
+          "nombre": "Movilidad articular",
+          "numeroRepeticion": 1,
+          "series": 1,
+          "objetivo": "Calentamiento",
+          "nivel": "Principiante",
+          "tiempo": "10 min",
+          "explicacion": "Realiza un calentamiento de 10 minutos con movilidad articular.",
+          "herramienta": "bicicleta estática",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Pull-up asistido",
+          "numeroRepeticion": 10,
+          "series": 3,
+          "objetivo": "Espalda",
+          "nivel": "Principiante",
+          "explicacion": "Realiza dominadas asistidas para fortalecer los músculos de la espalda.",
+          "herramienta": "máquina de pull-up asistido",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Remo en barra T",
+          "peso": "25kg",
+          "numeroRepeticion": 15,
+          "series": 3,
+          "objetivo": "Espalda",
+          "nivel": "Principiante",
+          "explicacion": "Realiza el ejercicio de remo en barra T para trabajar la espalda media.",
+          "herramienta": "barra T",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Crunch en máquina",
+          "peso": "30kg",
+          "numeroRepeticion": 20,
+          "series": 3,
+          "objetivo": "Abdomen",
+          "nivel": "Principiante",
+          "explicacion": "Realiza crunches en máquina para fortalecer el abdomen.",
+          "herramienta": "máquina de crunch",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "ejercicio",
+          "nombre": "Levantamiento de piernas en banco inclinado",
+          "numeroRepeticion": 20,
+          "series": 3,
+          "objetivo": "Abdomen",
+          "nivel": "Principiante",
+          "explicacion": "Realiza levantamientos de piernas en un banco inclinado para trabajar los abdominales inferiores.",
+          "herramienta": "banco inclinado",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "cardio",
+          "nombre": "Cinta de correr",
+          "numeroRepeticion": 1,
+          "series": 1,
+          "objetivo": "Cardio",
+          "nivel": "Principiante",
+          "tiempo": "30 min",
+          "explicacion": "Corre en la cinta durante 30 minutos a un ritmo constante.",
+          "herramienta": "cinta de correr",
+          "lugar": "gym"
+        },
+        {
+          "tipo": "estiramiento",
+          "nombre": "Estiramientos de espalda y abdomen",
+          "numeroRepeticion": 1,
+          "series": 1,
+          "objetivo": "Estiramiento",
+          "nivel": "Principiante",
+          "tiempo": "10 min",
+          "explicacion": "Realiza estiramientos específicos para relajar la espalda y el abdomen después del ejercicio.",
+          "lugar": "gym"
+        }
+      ]
+    },
+    {
+      "dia": "Domingo",
+      "objetivo": "Descanso Activo",
+      "ejercicios": [
+        {
+          "tipo": "cardio",
+          "nombre": "Caminata o ciclismo",
+          "numeroRepeticion": 1,
+          "series": 1,
+          "objetivo": "Cardio Ligero",
+          "nivel": "Principiante",
+          "tiempo": "30-45 min",
+          "explicacion": "Realiza una caminata o ciclismo a un ritmo suave durante 30 a 45 minutos.",
+          "lugar": "exterior"
+        },
+        {
+          "tipo": "estiramiento",
+          "nombre": "Estiramientos de cuerpo completo",
+          "numeroRepeticion": 1,
+          "series": 1,
+          "objetivo": "Estiramiento",
+          "nivel": "Principiante",
+          "tiempo": "10-15 min",
+          "explicacion": "Realiza estiramientos suaves para todo el cuerpo, enfocándote en la flexibilidad y la relajación muscular.",
+          "lugar": "casa"
+        }
+      ]
+    }
+  ]
+}
