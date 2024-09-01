@@ -1,5 +1,9 @@
 // js/tabSwitching.js
 
+document.addEventListener('DOMContentLoaded', function() {
+    setupTabSwitching();
+});
+
 function setupTabSwitching() {
     const exerciseTabButton = document.getElementById('exerciseTabButton');
     const foodTabButton = document.getElementById('foodTabButton');

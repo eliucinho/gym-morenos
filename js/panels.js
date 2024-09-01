@@ -25,11 +25,11 @@ function updatePanels(dayIndex, exercisesData, foodData) {
     const dayFood = foodData[dayIndex] || {};
 
     foodPanel.innerHTML = `
-        ${renderFoodItem("Comida 1","Desayuno", dayFood.desayuno, dayIndex, `food-${dayIndex}-1`)}
-        ${renderFoodItem("Comida 2","Media Mañana", dayFood.mediaManana, dayIndex, `food-${dayIndex}-2`)}
-        ${renderFoodItem("Comida 3","Almuerzo", dayFood.almuerzo, dayIndex, `food-${dayIndex}-3`)}
-        ${renderFoodItem("Comida 4","Merienda", dayFood.merienda, dayIndex, `food-${dayIndex}-4`)}
-        ${renderFoodItem("Comida 5","Cena", dayFood.cena, dayIndex, `food-${dayIndex}-5`)}
-        ${renderFoodItem("Comida 6","Antes de Dormir", dayFood.antesDeDormir, dayIndex, `food-${dayIndex}-6`)}
+        ${renderFoodItem("Desayuno", dayFood.desayuno, dayIndex, `food-${dayIndex}-1`)}
+        ${renderFoodItem("Media Mañana", dayFood.mediaManana, dayIndex, `food-${dayIndex}-2`)}
+        ${renderFoodItem("Almuerzo", dayFood.almuerzo, dayIndex, `food-${dayIndex}-3`)}
+        ${renderFoodItem("Merienda", dayFood.merienda, dayIndex, `food-${dayIndex}-4`)}
+        ${renderFoodItem("Cena", dayFood.cena, dayIndex, `food-${dayIndex}-5`)}
+        ${renderFoodItem("Antes de Dormir", dayFood.antesDeDormir, dayIndex, `food-${dayIndex}-6`)}
     `;
 }

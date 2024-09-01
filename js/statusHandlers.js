@@ -1,7 +1,4 @@
 // js/statusHandlers.js
-
-// js/statusHandlers.js
-
 document.addEventListener('click', function(event) {
     if (event.target.closest('.status-button')) {
         const button = event.target.closest('.status-button');

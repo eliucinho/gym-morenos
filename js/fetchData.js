@@ -29,8 +29,13 @@ async function fetchData() {
 // Función para asignar IDs únicos a cada ítem
 function assignUniqueIds(items, type, dayIndex) {
     items.forEach((item, index) => {
-        item.id = `${dayIndex}-${type}-${index + 1}`;
-        console.info(`Asignando ID: ${item.id} para ${type}`);
+        if (item) {
+            // Asigna un ID único basado en el día, tipo y el índice del ítem
+            item.id = `${dayIndex}-${type}-${index + 1}`;
+            console.info(`Asignando ID: ${item.id} para ${type}`);
+        } else {
+            console.warn(`Item no encontrado para ${type} en índice ${index}`);
+        }
     });
 }
 

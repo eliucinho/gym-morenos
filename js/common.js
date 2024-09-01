@@ -22,27 +22,28 @@ function renderItem(itemId, label, item, dayIndex, state, getSummaryHtml, getDet
     const { buttonClass, buttonIcon } = getButtonStateAndClass(state);
     const mediaElement = createMediaElement(item);
     const summaryHtml = getSummaryHtml(item);
-    const detailsHtml = getDetailsHtml(item, mediaElement);// Genera el ID único basado en el día, tipo, y ID del ítem
+    const detailsHtml = getDetailsHtml(item, mediaElement); 
 
-    return `
-        <div class="item-row mb-3">
-            <div class="d-flex justify-content-between align-items-center p-2 bg-white shadow-sm rounded">
-                <div class="flex-grow-1 ${titleClass}" data-toggle="collapse" data-target="#collapse-${item.id}" aria-expanded="false" aria-controls="collapse-${item.id}">
-                    <strong>${label ? `${label}: ` : ''}${item.nombre}</strong><br>
-                    ${summaryHtml}
-                </div>
-                <button class="btn status-button ${buttonClass} rounded-circle ml-2" data-id="${itemId}" data-type="${label.toLowerCase()}" data-name="${item.nombre}" data-state="${state}" data-day="${dayIndex}">
-                    ${buttonIcon}
-                </button>
+    const result = `
+    <div class="item-row mb-3">
+        <div class="d-flex justify-content-between align-items-center p-2 bg-white shadow-sm rounded">
+            <div class="flex-grow-1 ${titleClass}" data-toggle="collapse" data-target="#collapse-${itemId}" aria-expanded="false" aria-controls="collapse-${itemId}">
+                <strong>${label ? `${label}: ` : ''}${item.nombre}</strong><br>
+                ${summaryHtml}
             </div>
-            <div class="collapse mt-1" id="collapse-${item.id}">
-                <div class="bg-light p-2 rounded">
-                    ${detailsHtml}
-                </div>
-            </div>
-            <hr>
+            <button class="btn status-button ${buttonClass} rounded-circle ml-2" data-id="${itemId}" data-type="${label.toLowerCase()}" data-name="${item.nombre}" data-state="${state}" data-day="${dayIndex}">
+                ${buttonIcon}
+            </button>
         </div>
-    `;
+        <div class="collapse mt-1" id="collapse-${itemId}">
+            <div class="bg-light p-2 rounded">
+                ${detailsHtml}
+            </div>
+        </div>
+        <hr>
+    </div>
+`;
+    return result;
 }
 function getButtonStateAndClass(state) {
     let buttonClass, buttonIcon;

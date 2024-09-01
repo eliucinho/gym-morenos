@@ -1,12 +1,33 @@
 // js/renderExerciseItem.js
 
 function renderExerciseItem(label, item, dayIndex, itemId) {
+    if (!item) {
+        console.warn(`Ejercicio no encontrado: ${label}`);
+        return ''; // Retorna vacío si no hay ítem
+    }
+
     const state = getStatusItem(itemId); // Usa el ID único para obtener el estado
 
     // Aplicar clase 'tachado' si el estado es 'hecho'
     const titleClass = state === 'hecho' ? 'tachado' : '';
 
     return renderItem(itemId, label, item, dayIndex, state, getExerciseSummaryHtml, getExerciseDetailsHtml, titleClass);
+}
+
+// js/renderFoodItem.js
+
+function renderFoodItem(title, item, dayIndex, itemId) {
+    if (!item) {
+        console.warn(`Comida no encontrada: ${title}`);
+        return ''; // Retorna vacío si no hay ítem
+    }
+
+    const state = getStatusItem(itemId); // Usa el ID único para obtener el estado
+
+    // Aplicar clase 'tachado' si el estado es 'hecho'
+    const titleClass = state === 'hecho' ? 'tachado' : '';
+
+    return renderItem(itemId, title, item, dayIndex, state, getFoodSummaryHtml, getFoodDetailsHtml, titleClass);
 }
 
 function getExerciseSummaryHtml(item) {
